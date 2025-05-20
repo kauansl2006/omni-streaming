@@ -1,13 +1,51 @@
+@import "./_reset.css";
+@import "./_breakpoints.css";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-black: #000;
+  --color-white: #FFF;
+
+  --color-black-30: #4C4C4C;
+  --color-black-25: #404040;
+  --color-black-20: #333333;
+  --color-black-15: #262626;
+  --color-black-12: #1F1F1F;
+  --color-black-10: #1A1A1A;
+  --color-black-08: #141414;
+  --color-black-06: #0F0F0F;
+
+  --color-gray-99: #FCFCFD;
+  --color-gray-97: #F7F7F8;
+  --color-gray-90: #F1F1F3;
+  --color-gray-90: #E4E4E7;
+  --color-gray-75: #BFBFBF;
+  --color-gray-70: #B3B3B3;
+  --color-gray-65: #A6A6A6;
+  --color-gray-60: #999999;
+
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --fs-xxl: 58px; 
+  --fs-xl: 48px;  
+  --fs-lg2: 40px; 
+  --fs-lg: 38px;  
+  --fs-md2: 30px; 
+  --fs-md: 28px;  
+  --fs-sm2: 24px; 
+  --fs-sm: 22px;  
+  --fs-xs2: 20px; 
+  --fs-xs: 18px;  
+  --fs-2xs: 16px; 
+  --fs-3xs: 14px; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -17,26 +55,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-black);
+  background: var(--color-white);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
