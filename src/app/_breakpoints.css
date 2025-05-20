@@ -1,0 +1,5 @@
+:root {
+  --mq-mobile: 390px;
+  --mq-laptop: 1440px;
+  --mq-desktop: 1920px;
+}
