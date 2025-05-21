@@ -1,0 +1,48 @@
+import Link from "next/link";
+import styles from "./header.module.css";
+import Image from "next/image";
+
+export const HeaderComponent = () => {
+  return (
+    <header className={styles["header__header"]}>
+      <div className={styles["container__header"]}>
+        <div className={styles["logo-container__header"]}>
+          <Image
+            src="/logo.svg"
+            alt="Aplication Logo"
+            width={500}
+            height={500}
+            className={styles["logo__header"]}
+          />
+        </div>
+        <nav className={styles["nav__header"]}>
+          <ul className={styles["ul__header"]}>
+            <li className={styles["li__header"]}>
+              <Link href="/" className={styles["item__header"]}>
+                Home
+              </Link>
+            </li>
+            <li className={styles["li__header"]}>
+              <Link href="/movies-&-shows" className={styles["item__header"]}>
+                Movies & Shows
+              </Link>
+            </li>
+            <li className={styles["li__header"]}>
+              <a href="#" className={styles["item__header"]}>
+                Suport
+              </a>
+            </li>
+            <li className={styles["li__header"]}>
+              <a href="#" className={styles["item__header"]}>
+                Subscription
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className={styles["buttons-container__header"]}>
+          <button>Sign In</button>
+        </div>
+      </div>
+    </header>
+  );
+};
