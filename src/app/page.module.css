@@ -1,0 +1,111 @@
+.main__home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 150px;
+}
+
+.sec-background-image__home {
+  width: 100vw;
+}
+
+.container__home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 64px;
+}
+
+.subcontainer__home:nth-child(1) {
+  position: relative;
+  width: 100%;
+  height: 860px;
+  z-index: 0;
+}
+
+.subcontainer__home:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 681px;
+  box-shadow: inset 0px 80px 80px 30px var(--color-black);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.background-image__home {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.subcontainer__home:nth-child(2) {
+  position: relative;
+  width: 100%;
+  height: 296px;
+  z-index: 0;
+  padding-inline: 412px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subcontainer__home:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 561px;
+  box-shadow: 0px -250px 80px 180px var(--color-black-08);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.text-container__home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 14px;
+  position: absolute;
+  bottom: 380px;
+  z-index: 3;
+}
+
+.heading__home {
+  color: var(--color-white);
+  font-size: var(--fs-xxl);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  line-height: 120%;
+}
+
+.p__home {
+  text-align: center;
+  color: var(--color-gray-60);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  line-height: 150%;
+}
+
+.button__home {
+  margin-top: 50px;
+  padding: 18px 24px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50px;
+  color: var(--color-white);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  background-color: #2c0ce2;
+}
