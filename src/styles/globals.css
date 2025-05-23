@@ -1,5 +1,5 @@
-@import "./_styles/_reset.css";
-@import "./_styles/_breakpoints.css";
+@import "./_reset.css";
+@import "./_breakpoints.css";
 
 :root {
   --color-black: #000;
@@ -28,18 +28,18 @@
   --fw-medium: 500;
   --fw-regular: 400;
 
-  --fs-xxl: 58px; 
-  --fs-xl: 48px;  
-  --fs-lg2: 40px; 
-  --fs-lg: 38px;  
-  --fs-md2: 30px; 
-  --fs-md: 28px;  
-  --fs-sm2: 24px; 
-  --fs-sm: 22px;  
-  --fs-xs2: 20px; 
-  --fs-xs: 18px;  
-  --fs-2xs: 16px; 
-  --fs-3xs: 14px; 
+  --fs-xxl: 58px;
+  --fs-xl: 48px;
+  --fs-lg2: 40px;
+  --fs-lg: 38px;
+  --fs-md2: 30px;
+  --fs-md: 28px;
+  --fs-sm2: 24px;
+  --fs-sm: 22px;
+  --fs-xs2: 20px;
+  --fs-xs: 18px;
+  --fs-2xs: 16px;
+  --fs-3xs: 14px;
 }
 
 * {
