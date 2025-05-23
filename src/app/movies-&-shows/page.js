@@ -1,12 +1,12 @@
 import styles from "./page.module.css";
 
-import { MOVIES } from "@/dataset/movies";
-import { SHOWS } from "@/dataset/shows";
-
+import { getDiscoverMovies, getDiscoverShows } from "@/lib/data";
 import { ShowcaseComponent } from "@/components/Showcase";
-import { CardsListComponent } from "@/components/CardsList";
 
-export default function MoviesAndShowsPage() {
+export default async function MoviesAndShowsPage() {
+  const discoverMovies = await getDiscoverMovies();
+  const discoverShows = await getDiscoverShows();
+
   return (
     <main className={styles["main__movies-and-shows"]}>
       <section className={styles["section__movies-and-shows"]}>
@@ -16,9 +16,10 @@ export default function MoviesAndShowsPage() {
           </div>
 
           <div className={styles["showcase-container__movies-and-shows"]}>
-            <ShowcaseComponent heading={"Discover Movies"}>
-              <CardsListComponent items={MOVIES} />
-            </ShowcaseComponent>
+            <ShowcaseComponent
+              heading={"Discover Movies"}
+              items={discoverMovies}
+            />
           </div>
         </div>
       </section>
@@ -30,9 +31,10 @@ export default function MoviesAndShowsPage() {
           </div>
 
           <div className={styles["showcase-container__movies-and-shows"]}>
-            <ShowcaseComponent heading={"Discover TV Shows"}>
-              <CardsListComponent items={SHOWS} />
-            </ShowcaseComponent>
+            <ShowcaseComponent
+              heading={"Discover TV Shows"}
+              items={discoverShows}
+            />
           </div>
         </div>
       </section>
