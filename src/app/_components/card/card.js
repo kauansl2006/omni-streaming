@@ -1,22 +1,22 @@
 import Image from "next/image";
 import styles from "./card.module.css";
 
-export default function CardComponent({ data }) {
+export default function CardComponent({ item }) {
   return (
     <div className={styles["card__card"]}>
       <div className={styles["card-poster__card"]}>
         <Image
-          src={"https://image.tmdb.org/t/p/original" + data.poster_path}
-          alt={`${data.title ? data.title : data.name} poster`}
+          src={"https://image.tmdb.org/t/p/original" + item.poster_path}
+          alt={`${item.title ? item.title : item.name} poster`}
           width={500}
           height={500}
         />
       </div>
       <div className={styles["card-body__card"]}>
         <h5 className={styles["original-title__card"]}>
-          {data.original_title ? data.original_title : data.original_name}
+          {item.original_title ? item.original_title : item.original_name}
         </h5>
-        <p className={styles["overview__card"]}>{data.overview}</p>
+        <p className={styles["overview__card"]}>{item.overview}</p>
         <div className={styles["span-container__card"]}>
           <span>1:30min</span>
           <span>1.5k</span>
