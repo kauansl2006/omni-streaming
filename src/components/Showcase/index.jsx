@@ -1,6 +1,6 @@
 import styles from "./showcase.module.css";
 
-export default function ShowcaseComponent({ heading, children }) {
+export const ShowcaseComponent = ({ heading, children }) => {
   return (
     <section className={styles["section__showcase"]}>
       <div className={styles["container__showcase"]}>

@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
-import CardComponent from "../card/card";
+import { CardComponent } from "../Card";
 
-export default function CardsListComponent({ items }) {
+export const CardsListComponent = ({ items }) => {
   return (
     <Swiper spaceBetween={30} slidesPerView={5}>
       {items.map((item) => (

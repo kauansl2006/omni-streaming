@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
 
-import { MOVIES } from "@/app/_dataset/movies";
-import { SHOWS } from "@/app/_dataset/shows";
+import { MOVIES } from "@/dataset/movies";
+import { SHOWS } from "@/dataset/shows";
 
-import ShowcaseComponent from "@/app/_components/showcase/showcase";
-import CardsListComponent from "@/app/_components/cards-list/cards-list";
+import { ShowcaseComponent } from "@/components/Showcase";
+import { CardsListComponent } from "@/components/CardsList";
 
 export default function MoviesAndShowsPage() {
   return (
