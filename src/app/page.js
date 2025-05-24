@@ -7,6 +7,7 @@ import { ShowcaseComponent } from "@/components/Showcase";
 
 import { DEVICES } from "@/dataset/devices";
 import { DeviceCardComponent } from "@/components/DeviceCard";
+import { FaqSectionComponent } from "@/components/FaqSection";
 
 export default async function HomePage() {
   const movieGenresData = await fetchMovieGenres();
@@ -82,6 +83,8 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
+      <FaqSectionComponent />
     </main>
   );
 }
