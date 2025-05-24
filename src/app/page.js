@@ -5,6 +5,9 @@ import Image from "next/image";
 import { fetchMovieGenres, fetchDiscoverMovies } from "@/lib/data";
 import { ShowcaseComponent } from "@/components/Showcase";
 
+import { DEVICES } from "@/dataset/devices";
+import { DeviceCardComponent } from "@/components/DeviceCard";
+
 export default async function HomePage() {
   const movieGenresData = await fetchMovieGenres();
   const discoverMoviesData = await fetchDiscoverMovies();
@@ -58,6 +61,25 @@ export default async function HomePage() {
             items={discoverMovies}
             type={"movies"}
           />
+        </div>
+      </section>
+
+      <section className={styles["section-devices__home"]}>
+        <div className={styles["text-devices-container__home"]}>
+          <h2 className={styles["h2-devices__home"]}>
+            We Provide you streaming experience across various devices.
+          </h2>
+          <p className={styles["p-devices__home"]}>
+            With omni+ , you can enjoy your favorite movies and TV shows
+            anytime, anywhere. Our platform is designed to be compatible with a
+            wide range of devices, ensuring that you never miss a moment of
+            entertainment.
+          </p>
+        </div>
+        <div className={styles["devices-container__home"]}>
+          {DEVICES.map((device) => (
+            <DeviceCardComponent key={device.id} item={device} />
+          ))}
         </div>
       </section>
     </main>
