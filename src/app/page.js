@@ -1,7 +1,19 @@
 import styles from "./page.module.css";
+
 import Image from "next/image";
 
-export default function HomePage() {
+import { fetchMovieGenres, fetchDiscoverMovies } from "@/lib/data";
+import { ShowcaseComponent } from "@/components/Showcase";
+
+export default async function HomePage() {
+  const movieGenresData = await fetchMovieGenres();
+  const discoverMoviesData = await fetchDiscoverMovies();
+
+  const [movieGenres, discoverMovies] = await Promise.all([
+    movieGenresData,
+    discoverMoviesData,
+  ]);
+
   return (
     <main className={styles["main__home"]}>
       <section className={styles["sec-background-image__home"]}>
@@ -31,6 +43,21 @@ export default function HomePage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={styles["section-movies__home"]}>
+        <div className={styles["showcase-container__home"]}>
+          <ShowcaseComponent
+            heading={"Explore our wide variety of categories"}
+            items={movieGenres}
+            type={"categories"}
+          />
+          <ShowcaseComponent
+            heading={"Movies"}
+            items={discoverMovies}
+            type={"movies"}
+          />
         </div>
       </section>
     </main>

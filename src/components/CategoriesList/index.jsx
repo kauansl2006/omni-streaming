@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
-import { CardComponent } from "../Card";
+import { CategoryComponent } from "../Category";
 
-export const CardsListComponent = ({ items, swiperRef }) => {
+export const CategoriesListComponent = ({ swiperRef, items }) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -15,11 +15,11 @@ export const CardsListComponent = ({ items, swiperRef }) => {
         swiperRef.current = swiper
       }}
     >
-      {items.map((item) => (
+      {items.genres.map((item) => (
         <SwiperSlide key={item.id}>
-          <CardComponent item={item} />
+          <CategoryComponent item={item} />
         </SwiperSlide>
       ))}
     </Swiper>
-  );
+  )
 }
