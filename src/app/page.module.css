@@ -110,3 +110,33 @@
   font-weight: var(--fw-medium);
   background-color: #2c0ce2;
 }
+
+.section-movies__home {
+  width: 100%;
+  padding-inline: 162px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 100px;
+}
+
+.container-movies__home {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ row-gap: 30px;
+}
+
+.showcase-container__home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 100px;
+  width: 100%;
+  padding: 50px;
+  border: 1px solid var(--color-black-15);
+  border-radius: 12px;
+}
