@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
-import { CardComponent } from "../Card";
+import { CardComponent } from "./Card";
 
 export const CardsListComponent = ({ items, swiperRef }) => {
   return (

@@ -2,7 +2,7 @@ import styles from "./faq-section.module.css";
 
 import { QUESTIONS } from "@/dataset/questions";
 
-import { QuestionComponent } from "@/components/Question"
+import { QuestionComponent } from "@/components/FaqSection/Question"
 
 export const FaqSectionComponent = () => {
   return (
