@@ -4,8 +4,8 @@ import { Suspense, useRef } from "react";
 
 import styles from "./showcase.module.css";
 
-import { CardsListComponent } from "../CardsList";
-import { CategoriesListComponent } from "../CategoriesList";
+import { CardsListComponent } from "./CardsList";
+import { CategoriesListComponent } from "./CategoriesList";
 
 export const ShowcaseComponent = ({ heading, items, type }) => {
   const swiperRef = useRef(null)
