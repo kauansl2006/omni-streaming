@@ -14,7 +14,7 @@ const fetchTmdb = async (endpoint) => {
 
   return await fetch(url, options)
     .then((response) => response.json())
-    .then((data) => data.results)
+    .then((data) => (data.results ? data.results : data))
     .catch((error) => console.error(error));
 };
 
