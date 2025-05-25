@@ -15,6 +15,7 @@ import {
 } from "@/lib/data";
 
 import { ShowcaseComponent } from "@/components/Showcase";
+import { BannerComponent } from "@/components/Banner";
 
 export default async function MoviesAndShowsPage() {
   const movieGenresData = await fetchMovieGenres();
@@ -133,6 +134,8 @@ export default async function MoviesAndShowsPage() {
           </div>
         </div>
       </section>
+
+      <BannerComponent />
     </main>
   );
 }
