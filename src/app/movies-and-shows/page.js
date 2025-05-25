@@ -16,6 +16,8 @@ import {
 
 import { ShowcaseComponent } from "@/components/Showcase";
 import { BannerComponent } from "@/components/Banner";
+import { CarouselComponent } from "@/components/Carousel";
+import { IMAGES } from "@/dataset/images";
 
 export default async function MoviesAndShowsPage() {
   const movieGenresData = await fetchMovieGenres();
@@ -58,6 +60,10 @@ export default async function MoviesAndShowsPage() {
 
   return (
     <main className={styles["main__movies-and-shows"]}>
+      <section className={styles["section-carousel__carousel"]}>
+        <CarouselComponent items={IMAGES} />
+      </section>
+
       <section className={styles["section__movies-and-shows"]}>
         <div className={styles["container__movies-and-shows"]}>
           <div className={styles["text-container__movies-and-shows"]}>
