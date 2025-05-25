@@ -1,13 +1,20 @@
 .main__movies-and-shows {
   width: 100%;
-  margin-top: 150px;
   padding-inline: 162px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 100px;
   row-gap: 100px;
 }
+
+.section-carousel__carousel {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
 .section__movies-and-shows {
   width: 100%;
   height: auto;

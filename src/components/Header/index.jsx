@@ -23,7 +23,7 @@ export const HeaderComponent = () => {
               </Link>
             </li>
             <li className={styles["li__header"]}>
-              <Link href="/movies-&-shows" className={styles["item__header"]}>
+              <Link href="/movies-and-shows" className={styles["item__header"]}>
                 Movies & Shows
               </Link>
             </li>
