@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./card.module.css";
 
-export const CardComponent = ({ item }) => {
+export const Card = ({ item }) => {
   return (
     <div className={styles["card__card"]}>
       <div className={styles["card-poster__card"]}>

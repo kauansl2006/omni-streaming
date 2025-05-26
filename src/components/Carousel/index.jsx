@@ -10,10 +10,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { BackdropComponent } from "../Backdrop";
+import { Backdrop } from "../Backdrop";
 import { Suspense } from "react";
 
-export const CarouselComponent = ({ items }) => {
+export const Carousel = ({ items }) => {
   return (
       <Swiper
         modules={[Navigation, Pagination]}
@@ -25,7 +25,7 @@ export const CarouselComponent = ({ items }) => {
           items.map((item) => (
             <SwiperSlide key={item.id}>
               <Suspense fallback={<div className={styles["loading__carousel"]}>Loading backdrops...</div>} >
-                <BackdropComponent  item={item} />
+                <Backdrop  item={item} />
               </Suspense>
             </SwiperSlide>
           ))

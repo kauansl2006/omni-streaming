@@ -1,6 +1,6 @@
 import styles from "./subscription-card.module.css"
 
-export const SubscriptionCardComponent = ({ item }) => {
+export const SubscriptionCard = ({ item }) => {
   return (
     <div className={styles["card__subscription"]}>
       <div className={styles["text-container__subscription"]}>

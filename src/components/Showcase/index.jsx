@@ -4,10 +4,10 @@ import { Suspense, useRef } from "react";
 
 import styles from "./showcase.module.css";
 
-import { CardsListComponent } from "./CardsList";
-import { CategoriesListComponent } from "./CategoriesList";
+import { CardsList } from "./CardsList";
+import { CategoriesList } from "./CategoriesList";
 
-export const ShowcaseComponent = ({ heading, items, type, id }) => {
+export const Showcase = ({ heading, items, type, id }) => {
   const swiperRef = useRef(null)
 
   return (
@@ -40,9 +40,9 @@ export const ShowcaseComponent = ({ heading, items, type, id }) => {
           <Suspense fallback={<div className={styles["loading__showcase"]}>Loading...</div>}>
             {
               type === "categories" ? (
-                <CategoriesListComponent items={items} swiperRef={swiperRef} />
+                <CategoriesList items={items} swiperRef={swiperRef} />
               ) : (
-                <CardsListComponent items={items} swiperRef={swiperRef} />
+                <CardsList items={items} swiperRef={swiperRef} />
               )
             }
           </Suspense>

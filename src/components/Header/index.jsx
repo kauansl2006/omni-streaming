@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./header.module.css";
 import Image from "next/image";
 
-export const HeaderComponent = () => {
+export const Header = () => {
   return (
     <header className={styles["header__header"]}>
       <div className={styles["container__header"]}>

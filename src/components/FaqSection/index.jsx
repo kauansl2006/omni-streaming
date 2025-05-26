@@ -2,9 +2,9 @@ import styles from "./faq-section.module.css";
 
 import { QUESTIONS } from "@/dataset/questions";
 
-import { QuestionComponent } from "@/components/FaqSection/Question"
+import { Question } from "@/components/FaqSection/Question"
 
-export const FaqSectionComponent = ({ id }) => {
+export const FaqSection = ({ id }) => {
   return (
     <section id={id ? id : null} className={styles["section-faq__faq"]}>
       <div className={styles["heading-container__faq"]}>
@@ -19,14 +19,14 @@ export const FaqSectionComponent = ({ id }) => {
         <div className={styles["items-container"]}>
           {
             QUESTIONS.slice(0,4).map((question) => (
-              <QuestionComponent key={question.id} item={question} />
+              <Question key={question.id} item={question} />
             ))
           }
         </div>
         <div className={styles["items-container"]}>
           {
             QUESTIONS.slice(4,8).map((question) => (
-              <QuestionComponent key={question.id} item={question} />
+              <Question key={question.id} item={question} />
             ))
           }
         </div>

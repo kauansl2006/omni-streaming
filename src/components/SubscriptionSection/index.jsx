@@ -2,9 +2,9 @@ import styles from "./subscription-section.module.css";
 
 import { SUBSCRIPTIONS } from "@/dataset/subscriptions";
 
-import { SubscriptionCardComponent } from "./SubscriptionCard";
+import { SubscriptionCard } from "./SubscriptionCard";
 
-export const SubscriptionSectionComponent = ({ id }) => {
+export const SubscriptionSection = ({ id }) => {
   return (
     <section id={id ? id : null} className={styles["section-subscription__subscription"]}>
       <div className={styles["heading-container__subscription"]}>
@@ -23,7 +23,7 @@ export const SubscriptionSectionComponent = ({ id }) => {
     <div className={styles["subscription-container__subscription"]}>
       {
         SUBSCRIPTIONS.map((subscription) => (
-          <SubscriptionCardComponent key={subscription.id} item={subscription} />
+          <SubscriptionCard key={subscription.id} item={subscription} />
         ))
       }
     </div>

@@ -3,13 +3,13 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 import { fetchMovieGenres, fetchDiscoverMovies } from "@/lib/data";
-import { ShowcaseComponent } from "@/components/Showcase";
+import { Showcase } from "@/components/Showcase";
 
 import { DEVICES } from "@/dataset/devices";
-import { DeviceCardComponent } from "@/components/DeviceCard";
-import { FaqSectionComponent } from "@/components/FaqSection";
-import { SubscriptionSectionComponent } from "@/components/SubscriptionSection";
-import { BannerComponent } from "@/components/Banner";
+import { DeviceCard } from "@/components/DeviceCard";
+import { FaqSection } from "@/components/FaqSection";
+import { SubscriptionSection } from "@/components/SubscriptionSection";
+import { Banner } from "@/components/Banner";
 
 export default async function HomePage() {
   const movieGenresData = await fetchMovieGenres();
@@ -56,16 +56,12 @@ export default async function HomePage() {
 
       <section id="categories" className={styles["section-movies__home"]}>
         <div className={styles["showcase-container__home"]}>
-          <ShowcaseComponent
+          <Showcase
             heading={"Explore our wide variety of categories"}
             items={movieGenres}
             type={"categories"}
           />
-          <ShowcaseComponent
-            heading={"Movies"}
-            items={discoverMovies}
-            type={"movies"}
-          />
+          <Showcase heading={"Movies"} items={discoverMovies} type={"movies"} />
         </div>
       </section>
 
@@ -83,16 +79,16 @@ export default async function HomePage() {
         </div>
         <div className={styles["devices-container__home"]}>
           {DEVICES.map((device) => (
-            <DeviceCardComponent key={device.id} item={device} />
+            <DeviceCard key={device.id} item={device} />
           ))}
         </div>
       </section>
 
-      <FaqSectionComponent id="faq" />
+      <FaqSection id="faq" />
 
-      <SubscriptionSectionComponent id="pricing" />
+      <SubscriptionSection id="pricing" />
 
-      <BannerComponent />
+      <Banner />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import styles from "./device-card.module.css";
 
-export const DeviceCardComponent = ({ item }) =>  {
+export const DeviceCard = ({ item }) =>  {
   return (
     <div className={styles["card__device"]}>
       <div className={styles["title-container__device"]}>

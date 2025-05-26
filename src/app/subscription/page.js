@@ -1,12 +1,12 @@
 import styles from "./page.module.css";
 
-import { SubscriptionSectionComponent } from "@/components/SubscriptionSection";
-import { BannerComponent } from "@/components/Banner";
+import { SubscriptionSection } from "@/components/SubscriptionSection";
+import { Banner } from "@/components/Banner";
 
 export default function SubscriptionPage() {
   return (
     <main className={styles["main__subscription"]}>
-      <SubscriptionSectionComponent id="plans-section" />
+      <SubscriptionSection id="plans-section" />
 
       <section
         id="comparasion-section"
@@ -121,7 +121,7 @@ export default function SubscriptionPage() {
         </div>
       </section>
 
-      <BannerComponent />
+      <Banner />
     </main>
   );
 }

@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
-import { CardComponent } from "./Card";
+import { Card } from "./Card";
 
-export const CardsListComponent = ({ items, swiperRef }) => {
+export const CardsList = ({ items, swiperRef }) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -17,7 +17,7 @@ export const CardsListComponent = ({ items, swiperRef }) => {
     >
       {items.map((item) => (
         <SwiperSlide key={item.id}>
-          <CardComponent item={item} />
+          <Card item={item} />
         </SwiperSlide>
       ))}
     </Swiper>

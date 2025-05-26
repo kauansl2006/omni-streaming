@@ -2,8 +2,8 @@ import { Manrope } from "next/font/google";
 
 import "../styles/globals.css";
 
-import { HeaderComponent } from "../components/Header";
-import { FooterComponent } from "../components/Footer";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <HeaderComponent />
+        <Header />
         {children}
-        <FooterComponent />
+        <Footer />
       </body>
     </html>
   );

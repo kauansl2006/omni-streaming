@@ -2,7 +2,7 @@ import styles from "./banner.module.css";
 
 import Image from "next/image";
 
-export const BannerComponent = () => {
+export const Banner = () => {
   return (
     <section className={styles["section-banner__banner"]}>
       <div className={styles["container__banner"]}>

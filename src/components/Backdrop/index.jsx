@@ -2,7 +2,7 @@ import styles from "./backdrop.module.css";
 
 import Image from "next/image";
 
-export const BackdropComponent = ({ item }) => {
+export const Backdrop = ({ item }) => {
   return (
     <div className={styles["backdrop-container__backdrop"]}>
 

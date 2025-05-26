@@ -2,7 +2,7 @@ import styles from "./footer.module.css";
 
 import Link from "next/link";
 
-export const FooterComponent = () => {
+export const Footer = () => {
   return (
     <footer className={styles["footer__footer"]}>
       <div className={styles["container__footer"]}>

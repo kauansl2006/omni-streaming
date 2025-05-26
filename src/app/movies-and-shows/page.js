@@ -14,9 +14,9 @@ import {
   fetchUpcomingMovies,
 } from "@/lib/data";
 
-import { ShowcaseComponent } from "@/components/Showcase";
-import { BannerComponent } from "@/components/Banner";
-import { CarouselComponent } from "@/components/Carousel";
+import { Showcase } from "@/components/Showcase";
+import { Banner } from "@/components/Banner";
+import { Carousel } from "@/components/Carousel";
 import { IMAGES } from "@/dataset/images";
 
 export default async function MoviesAndShowsPage() {
@@ -61,7 +61,7 @@ export default async function MoviesAndShowsPage() {
   return (
     <main className={styles["main__movies-and-shows"]}>
       <section className={styles["section-carousel__carousel"]}>
-        <CarouselComponent items={IMAGES} />
+        <Carousel items={IMAGES} />
       </section>
 
       <section className={styles["section__movies-and-shows"]}>
@@ -71,31 +71,31 @@ export default async function MoviesAndShowsPage() {
           </div>
 
           <div className={styles["showcase-container__movies-and-shows"]}>
-            <ShowcaseComponent
+            <Showcase
               heading={"Movie Genres"}
               items={movieGenres}
               type={"categories"}
               id="movies-gernres"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Discover Movies"}
               items={discoverMovies}
               type={"movies"}
               id="discover-movies"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Popular Movies"}
               items={popularMovies}
               type={"movies"}
               id="popular-movies"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Top Rated Movies"}
               items={topRatedMovies}
               type={"movies"}
               id="top-rated-movies"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Up Coming Movies"}
               items={upcomingMovies}
               type={"movies"}
@@ -112,37 +112,37 @@ export default async function MoviesAndShowsPage() {
           </div>
 
           <div className={styles["showcase-container__movies-and-shows"]}>
-            <ShowcaseComponent
+            <Showcase
               heading={"Show Genres"}
               items={showGenres}
               type={"categories"}
               id="shows-gernres"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Discover TV Shows"}
               items={discoverShows}
               type={"shows"}
               id="discover-movies"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Airing Today Shows"}
               items={airingTodayShows}
               type={"shows"}
               id="airing-today-movies"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"On The Air Shows"}
               items={onTheAirShows}
               type={"shows"}
               id="on-the-air"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Popular Shows"}
               items={popularShows}
               type={"shows"}
               id="popular-movies"
             />
-            <ShowcaseComponent
+            <Showcase
               heading={"Top Rated Shows"}
               items={topRatedShows}
               type={"shows"}
@@ -152,7 +152,7 @@ export default async function MoviesAndShowsPage() {
         </div>
       </section>
 
-      <BannerComponent />
+      <Banner />
     </main>
   );
 }

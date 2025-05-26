@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import styles from "./question.module.css";
 
-export const QuestionComponent = ({ item }) => {
+export const Question = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
