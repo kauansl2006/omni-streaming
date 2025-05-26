@@ -1,4 +1,4 @@
-import styles from "./subscription-section.module.css";
+import styles from "./SubscriptionCard.module.css";
 
 import { SUBSCRIPTIONS } from "@/dataset/subscriptions";
 

@@ -1,4 +1,4 @@
-import styles from "./subscription-card.module.css"
+import styles from "./SubscriptionCard.module.css"
 
 export const SubscriptionCard = ({ item }) => {
   return (

@@ -1,5 +1,6 @@
+import styles from "./Card.module.css";
+
 import Image from "next/image";
-import styles from "./card.module.css";
 
 export const Card = ({ item }) => {
   return (

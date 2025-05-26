@@ -1,4 +1,4 @@
-import styles from "./faq-section.module.css"; 
+import styles from "./FaqSection.module.css"; 
 
 import { QUESTIONS } from "@/dataset/questions";
 

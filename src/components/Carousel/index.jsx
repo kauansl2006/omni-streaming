@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./carousel.module.css";
+import styles from "./Carousel.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 

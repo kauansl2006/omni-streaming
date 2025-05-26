@@ -2,7 +2,7 @@
 
 import { Suspense, useRef } from "react";
 
-import styles from "./showcase.module.css";
+import styles from "./Showcase.module.css";
 
 import { CardsList } from "./CardsList";
 import { CategoriesList } from "./CategoriesList";

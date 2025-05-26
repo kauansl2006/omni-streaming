@@ -1,4 +1,4 @@
-import styles from "./device-card.module.css";
+import styles from "./DeviceCard.module.css";
 
 export const DeviceCard = ({ item }) =>  {
   return (

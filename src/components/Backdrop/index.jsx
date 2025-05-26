@@ -1,4 +1,4 @@
-import styles from "./backdrop.module.css";
+import styles from "./Backdrop.module.css";
 
 import Image from "next/image";
 

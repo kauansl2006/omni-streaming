@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import styles from "./question.module.css";
+import styles from "./Question.module.css";
 
 export const Question = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
