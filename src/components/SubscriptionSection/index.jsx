@@ -11,7 +11,7 @@ export const SubscriptionSectionComponent = () => {
         <div className={styles["text-container__subscription"]}>
           <h2 className={styles["heading__subscription"]}>Choose the plan that's right for you</h2>
           <p className={styles["p__subscription"]}>
-          Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!
+          Join omni+ and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!
           </p>
         </div>
         <div className={styles["buttons-container__subscription"]}>
