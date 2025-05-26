@@ -33,9 +33,9 @@ export const HeaderComponent = () => {
               </Link>
             </li>
             <li className={styles["li__header"]}>
-              <a href="#" className={styles["item__header"]}>
+              <Link href="/subscription" className={styles["item__header"]}>
                 Subscription
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
