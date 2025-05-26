@@ -28,9 +28,9 @@ export const HeaderComponent = () => {
               </Link>
             </li>
             <li className={styles["li__header"]}>
-              <a href="#" className={styles["item__header"]}>
+              <Link href="/suport" className={styles["item__header"]}>
                 Suport
-              </a>
+              </Link>
             </li>
             <li className={styles["li__header"]}>
               <a href="#" className={styles["item__header"]}>
