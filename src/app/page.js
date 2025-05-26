@@ -1,94 +1,51 @@
 import styles from "./page.module.css";
 
-import Image from "next/image";
+import { fetchDiscoverMovies } from "@/lib/data";
 
-import { fetchMovieGenres, fetchDiscoverMovies } from "@/lib/data";
 import { Showcase } from "@/components/Showcase";
-
-import { DEVICES } from "@/dataset/devices";
-import { DeviceCard } from "@/components/DeviceCard";
-import { FaqSection } from "@/components/FaqSection";
-import { SubscriptionSection } from "@/components/SubscriptionSection";
-import { Banner } from "@/components/Banner";
+import { FaqList } from "@/components/Home/FaqList";
+import { SubscriptionList } from "@/components/Home/SubscriptionList";
+import { Banner } from "@/components/Home/Banner";
+import { BackgroundImage } from "@/components/Home/BackgroundImage";
+import { DevicesList } from "@/components/Home/DevicesList";
 
 export default async function HomePage() {
-  const movieGenresData = await fetchMovieGenres();
-  const discoverMoviesData = await fetchDiscoverMovies();
-
-  const [movieGenres, discoverMovies] = await Promise.all([
-    movieGenresData,
-    discoverMoviesData,
-  ]);
+  const discoverMovies = await fetchDiscoverMovies();
 
   return (
-    <main className={styles["main__home"]}>
-      <section className={styles["image-section__home"]}>
-        <div className={styles["image-container__home"]}>
-          <div className={styles["background-image-container__home"]}>
-            <Image
-              src="/background.png"
-              alt="Background Image from Application"
-              width={1920}
-              height={860}
-              className={styles["image__home"]}
-            />
-          </div>
-          <div className={styles["text-image-container__home"]}>
-            <div className={styles["text-container__home"]}>
-              <h1 className={styles["heading__home"]}>
-                The Best Streaming Experience
-              </h1>
-              <p className={styles["text__home"]}>
-                omni+ is the best streaming experience for watching your
-                favorite movies and shows on demand, anytime, anywhere. With
-                omni+, you can enjoy a wide variety of content, including the
-                latest blockbusters, classic movies, popular TV shows, and more.
-                You can also create your own watchlists, so you can easily find
-                the content you want to watch.
-              </p>
-            </div>
-            <button className={styles["button__home"]}>
-              Start Watching Now
-            </button>
-          </div>
-        </div>
+    <main className={styles["home__main"]}>
+      <section
+        id="background-image-section"
+        className={styles["home__background-image-section"]}
+      >
+        <BackgroundImage />
       </section>
 
-      <section id="categories" className={styles["section-movies__home"]}>
-        <div className={styles["showcase-container__home"]}>
-          <Showcase
-            heading={"Explore our wide variety of categories"}
-            items={movieGenres}
-            type={"categories"}
-          />
-          <Showcase heading={"Movies"} items={discoverMovies} type={"movies"} />
-        </div>
+      <section
+        id="categories-section"
+        className={styles["home__categories-section"]}
+      >
+        <Showcase heading={"Movies"} items={discoverMovies} type={"movies"} />
       </section>
 
-      <section id="devices" className={styles["section-devices__home"]}>
-        <div className={styles["text-devices-container__home"]}>
-          <h2 className={styles["h2-devices__home"]}>
-            We Provide you streaming experience across various devices.
-          </h2>
-          <p className={styles["p-devices__home"]}>
-            With omni+ , you can enjoy your favorite movies and TV shows
-            anytime, anywhere. Our platform is designed to be compatible with a
-            wide range of devices, ensuring that you never miss a moment of
-            entertainment.
-          </p>
-        </div>
-        <div className={styles["devices-container__home"]}>
-          {DEVICES.map((device) => (
-            <DeviceCard key={device.id} item={device} />
-          ))}
-        </div>
+      <section id="devices-section" className={styles["home__devices-section"]}>
+        <DevicesList />
       </section>
 
-      <FaqSection id="faq" />
+      <section id="faq-section" className={styles["home__faq-section"]}>
+        <FaqList />
+      </section>
 
-      <SubscriptionSection id="pricing" />
+      <section
+        id="subscription-section"
+        className={styles["home__subscription-section"]}
+      >
+        <SubscriptionList />
+      </section>
 
-      <Banner />
+      <section id="banner-section" className={styles["home__banner-section"]}>
+        <Banner />
+      </section>
     </main>
   );
 }

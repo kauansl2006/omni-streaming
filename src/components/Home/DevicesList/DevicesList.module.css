@@ -1,0 +1,31 @@
+.devices-list__text-devices-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 14px;
+  padding-right: 300px;
+}
+
+.devices-list__heading {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: 150%;
+}
+
+.devices-list__text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  color: var(--color-gray-60);
+  line-height: 150%;
+}
+
+.devices-list__devices-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}

@@ -10,22 +10,22 @@ export const Footer = () => {
           <h6 className={styles["heading__footer"]}>Home</h6>
           <ul className={styles["ul__footer"]}>
             <li className={styles["li__footer"]}>
-              <Link href="/#categories" className={styles["item__footer"]}>
+              <Link href="/#categories-section" className={styles["item__footer"]}>
                 Categories
               </Link>
             </li>
             <li className={styles["li__footer"]}>
-              <Link href="/#devices" className={styles["item__footer"]}>
+              <Link href="/#devices-section" className={styles["item__footer"]}>
                 Devices
               </Link>
             </li>
             <li className={styles["li__footer"]}>
-              <Link href="/#pricing" className={styles["item__footer"]}>
+              <Link href="/#subscription-section" className={styles["item__footer"]}>
                 Pricing
               </Link>
             </li>
             <li className={styles["li__footer"]}>
-              <Link href="/#faq" className={styles["item__footer"]}>
+              <Link href="/#faq-section" className={styles["item__footer"]}>
                 FAQ
               </Link>
             </li>

@@ -1,20 +1,11 @@
-.section-faq__faq {
-  width: 100%;
-  padding-inline: 162px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 80px;
-}
-.heading-container__faq {
+.faq-list__heading-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: 100px;
 }
-.text-container__faq {
+.faq-list__text-container {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -22,19 +13,19 @@
   flex-direction: column;
   row-gap: 14px;
 }
-.heading__faq {
+.faq-list__heading {
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   color: var(--color-white);
   line-height: 150%;
 }
-.p__faq {
+.faq-list__text {
   font-size: var(--fs-xs);
   font-weight: var(--fw-regular);
   color: var(--color-gray-60);
   line-height: 150%;
 }
-.button__faq {
+.faq-list__button {
   padding: 18px 24px;
   border: none;
   appearance: none;
@@ -50,14 +41,14 @@
   text-wrap: nowrap;
 }
 
-.faq-container__faq {
+.faq-list__faq-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 80px;
 }
-.items-container {
+.faq-list__items-container {
   width: 100%;
   display: flex;
   align-items: center;

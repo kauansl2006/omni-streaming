@@ -1,4 +1,4 @@
-.card__subscription {
+.subscription-card__card {
   width: 100%;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
   background-color: var(--color-black-10);
   border: 1px solid var(--color-black-15)
 }
-.text-container__subscription {
+.subscription-card__text-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -18,46 +18,46 @@
   row-gap: 16px;
   width: 100%;
 }
-.heading__subscription {
+.subscription-card__heading {
   font-size: var(--fs-sm2);
   font-weight: var(--fw-bold);
   line-height: 150%;
   color: var(--color-white);
 }
-.p__subscription {
+.subscription-card__p {
   font-size: var(--fs-xs);
   font-weight: var(--fw-regular);
   line-height: 150%;
   color: var(--color-gray-60);
 }
-.price-container__subscription {
+.subscription-card__price-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   column-gap: 4px;
   width: 100%;
 }
-.price__subcription {
+.subscription-card__price__subcription {
   font-size: var(--fs-lg2);
   font-weight: var(--fw-bold);
   line-height: 73%;
   color: var(--color-white);
 }
-.price-text__subscription {
+.subscription-card__price-text {
   font-size: var(--fs-xs);
   font-weight: var(--fw-medium);
   line-height: 73%;
   color: var(--color-gray-60);
   margin-top: 15px;
 }
-.buttons-container {
+.subscription-card__buttons-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   column-gap: 20px;
 }
-.button__subscription:nth-child(1) {
+.subscription-card__button:nth-child(1) {
   width: 100%;
   outline: none;
   appearance: none;
@@ -71,7 +71,7 @@
   color: var(--color-white);
   cursor: pointer;
 }
-.button__subscription:nth-child(2) {
+.subscription-card__button:nth-child(2) {
   cursor: pointer;
   width: 100%;
   outline: none;

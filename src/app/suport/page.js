@@ -1,8 +1,8 @@
-import { FaqSection } from "@/components/FaqSection";
+import { FaqList } from "@/components/Home/FaqList";
 import styles from "./page.module.css";
 
 import Image from "next/image";
-import { Banner } from "@/components/Banner";
+import { Banner } from "@/components/Home/Banner";
 
 export default function SuportPage() {
   return (
@@ -136,7 +136,7 @@ export default function SuportPage() {
         </div>
       </section>
 
-      <FaqSection />
+      <FaqList />
       <Banner />
     </main>
   );

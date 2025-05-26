@@ -15,7 +15,7 @@ import {
 } from "@/lib/data";
 
 import { Showcase } from "@/components/Showcase";
-import { Banner } from "@/components/Banner";
+import { Banner } from "@/components/Home/Banner";
 import { Carousel } from "@/components/Carousel";
 import { IMAGES } from "@/dataset/images";
 
