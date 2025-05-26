@@ -7,11 +7,11 @@ import styles from "./showcase.module.css";
 import { CardsListComponent } from "./CardsList";
 import { CategoriesListComponent } from "./CategoriesList";
 
-export const ShowcaseComponent = ({ heading, items, type }) => {
+export const ShowcaseComponent = ({ heading, items, type, id }) => {
   const swiperRef = useRef(null)
 
   return (
-    <section className={styles["section__showcase"]}>
+    <section id={id ? id : null} className={styles["section__showcase"]}>
       <div className={styles["container__showcase"]}>
         <div className={styles["heading-container__showcase"]}>
           <h2 className={styles["h2__showcase"]}>{heading}</h2>

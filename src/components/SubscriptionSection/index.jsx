@@ -4,9 +4,9 @@ import { SUBSCRIPTIONS } from "@/dataset/subscriptions";
 
 import { SubscriptionCardComponent } from "./SubscriptionCard";
 
-export const SubscriptionSectionComponent = () => {
+export const SubscriptionSectionComponent = ({ id }) => {
   return (
-    <section className={styles["section-subscription__subscription"]}>
+    <section id={id ? id : null} className={styles["section-subscription__subscription"]}>
       <div className={styles["heading-container__subscription"]}>
         <div className={styles["text-container__subscription"]}>
           <h2 className={styles["heading__subscription"]}>Choose the plan that's right for you</h2>
