@@ -4,9 +4,9 @@ import { QUESTIONS } from "@/dataset/questions";
 
 import { QuestionComponent } from "@/components/FaqSection/Question"
 
-export const FaqSectionComponent = () => {
+export const FaqSectionComponent = ({ id }) => {
   return (
-    <section className={styles["section-faq__faq"]}>
+    <section id={id ? id : null} className={styles["section-faq__faq"]}>
       <div className={styles["heading-container__faq"]}>
         <div className={styles["text-container__faq"]}>
           <h2 className={styles["heading__faq"]}>Frequently Asked Questions</h2>

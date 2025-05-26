@@ -75,26 +75,31 @@ export default async function MoviesAndShowsPage() {
               heading={"Movie Genres"}
               items={movieGenres}
               type={"categories"}
+              id="movies-gernres"
             />
             <ShowcaseComponent
               heading={"Discover Movies"}
               items={discoverMovies}
               type={"movies"}
+              id="discover-movies"
             />
             <ShowcaseComponent
               heading={"Popular Movies"}
               items={popularMovies}
               type={"movies"}
+              id="popular-movies"
             />
             <ShowcaseComponent
               heading={"Top Rated Movies"}
               items={topRatedMovies}
               type={"movies"}
+              id="top-rated-movies"
             />
             <ShowcaseComponent
               heading={"Up Coming Movies"}
               items={upcomingMovies}
               type={"movies"}
+              id="upcoming-movies"
             />
           </div>
         </div>
@@ -111,31 +116,37 @@ export default async function MoviesAndShowsPage() {
               heading={"Show Genres"}
               items={showGenres}
               type={"categories"}
+              id="shows-gernres"
             />
             <ShowcaseComponent
               heading={"Discover TV Shows"}
               items={discoverShows}
               type={"shows"}
+              id="discover-movies"
             />
             <ShowcaseComponent
               heading={"Airing Today Shows"}
               items={airingTodayShows}
               type={"shows"}
+              id="airing-today-movies"
             />
             <ShowcaseComponent
               heading={"On The Air Shows"}
               items={onTheAirShows}
               type={"shows"}
+              id="on-the-air"
             />
             <ShowcaseComponent
               heading={"Popular Shows"}
               items={popularShows}
               type={"shows"}
+              id="popular-movies"
             />
             <ShowcaseComponent
               heading={"Top Rated Shows"}
               items={topRatedShows}
               type={"shows"}
+              id="top-rated-movies"
             />
           </div>
         </div>
