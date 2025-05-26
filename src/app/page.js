@@ -54,7 +54,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className={styles["section-movies__home"]}>
+      <section id="categories" className={styles["section-movies__home"]}>
         <div className={styles["showcase-container__home"]}>
           <ShowcaseComponent
             heading={"Explore our wide variety of categories"}
@@ -68,7 +68,8 @@ export default async function HomePage() {
           />
         </div>
       </section>
-      <section className={styles["section-devices__home"]}>
+
+      <section id="devices" className={styles["section-devices__home"]}>
         <div className={styles["text-devices-container__home"]}>
           <h2 className={styles["h2-devices__home"]}>
             We Provide you streaming experience across various devices.
@@ -86,8 +87,11 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
-      <FaqSectionComponent />
-      <SubscriptionSectionComponent />
+
+      <FaqSectionComponent id="faq" />
+
+      <SubscriptionSectionComponent id="pricing" />
+
       <BannerComponent />
     </main>
   );

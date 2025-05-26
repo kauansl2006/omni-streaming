@@ -3,12 +3,15 @@ import styles from "./page.module.css";
 import { SubscriptionSectionComponent } from "@/components/SubscriptionSection";
 import { BannerComponent } from "@/components/Banner";
 
-export default function SuportPage() {
+export default function SubscriptionPage() {
   return (
     <main className={styles["main__subscription"]}>
-      <SubscriptionSectionComponent />
+      <SubscriptionSectionComponent id="plans-section" />
 
-      <section className={styles["comparasion-section__subscription"]}>
+      <section
+        id="comparasion-section"
+        className={styles["comparasion-section__subscription"]}
+      >
         <div className={styles["text-container__subscription"]}>
           <h1 className={styles["heading__subscription"]}>
             Compare our plans and find the right one for you

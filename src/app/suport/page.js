@@ -7,7 +7,7 @@ import { BannerComponent } from "@/components/Banner";
 export default function SuportPage() {
   return (
     <main className={styles["main__suport"]}>
-      <section className={styles["suport-section__suport"]}>
+      <section id="suport-section" className={styles["suport-section__suport"]}>
         <div className={styles["suport-container__suport"]}>
           <div className={styles["sub-container__suport"]}>
             <div className={styles["text-container__suport"]}>
