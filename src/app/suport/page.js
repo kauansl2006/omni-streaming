@@ -1,6 +1,8 @@
+import { FaqSectionComponent } from "@/components/FaqSection";
 import styles from "./page.module.css";
 
 import Image from "next/image";
+import { BannerComponent } from "@/components/Banner";
 
 export default function SuportPage() {
   return (
@@ -133,6 +135,9 @@ export default function SuportPage() {
           </div>
         </div>
       </section>
+
+      <FaqSectionComponent />
+      <BannerComponent />
     </main>
   );
 }

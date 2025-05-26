@@ -1,6 +1,5 @@
 .main__suport {
   width: 100%;
-  padding-inline: 162px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +10,8 @@
 
 .suport-section__suport {
   width: 100%;
+  padding-inline: 162px;
+
 }
 
 .suport-container__suport {
