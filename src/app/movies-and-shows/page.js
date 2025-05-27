@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 
-import { Showcase } from "@/components/ShowcaseList/Showcase";
 import { Banner } from "@/components/Banner";
 import { Carousel } from "@/components/Carousel";
 import { IMAGES } from "@/dataset/images";

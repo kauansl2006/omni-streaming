@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 
-import { fetchDiscoverMovies } from "@/lib/data";
+import { TheMovieDbService } from "@/services/theMovieDbService";
 
 import { Showcase } from "@/components/ShowcaseList/Showcase";
 import { FaqList } from "@/components/FaqList";
@@ -10,7 +10,7 @@ import { BackgroundImage } from "@/components/BackgroundImage";
 import { DevicesList } from "@/components/DevicesList";
 
 export default async function HomePage() {
-  const discoverMovies = await fetchDiscoverMovies();
+  const discoverMovies = await TheMovieDbService.getDiscoverMovies();
 
   return (
     <main className={styles["home__main"]}>

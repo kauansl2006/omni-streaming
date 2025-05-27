@@ -1,33 +1,21 @@
 import styles from "./ShowcaseList.module.css";
 
-import {
-  fetchAiringTodayShows,
-  fetchDiscoverMovies,
-  fetchDiscoverShows,
-  fetchMovieGenres,
-  fetchOnTheAirShows,
-  fetchPopularMovies,
-  fetchPopularShows,
-  fetchShowGenres,
-  fetchTopRatedMovies,
-  fetchTopRatedShows,
-  fetchUpcomingMovies,
-} from "@/lib/data";
+import { TheMovieDbService } from "@/services/theMovieDbService";
 
 import { Showcase } from "@/components/ShowcaseList/Showcase";
 
 export const ShowcaseList = async ({ type }) => {
-  const movieGenresData = await fetchMovieGenres();
-  const discoverMoviesData = await fetchDiscoverMovies();
-  const popularMoviesData = await fetchPopularMovies();
-  const topRatedMoviesData = await fetchTopRatedMovies();
-  const upcomingMoviesData = await fetchUpcomingMovies();
-  const showGenresData = await fetchShowGenres();
-  const discoverShowsData = await fetchDiscoverShows();
-  const airingTodayShowsData = await fetchAiringTodayShows();
-  const onTheAirShowsData = await fetchOnTheAirShows();
-  const popularShowsData = await fetchPopularShows();
-  const topRatedShowsData = await fetchTopRatedShows();
+  const movieGenresData = await TheMovieDbService.getMovieGenres();
+  const discoverMoviesData = await TheMovieDbService.getDiscoverMovies();
+  const popularMoviesData = await TheMovieDbService.getPopularMovies();
+  const topRatedMoviesData = await TheMovieDbService.getTopRatedMovies();
+  const upcomingMoviesData = await TheMovieDbService.getUpcomingMovies();
+  const showGenresData = await TheMovieDbService.getShowGenres();
+  const discoverShowsData = await TheMovieDbService.getDiscoverShows();
+  const airingTodayShowsData = await TheMovieDbService.getAiringTodayShows();
+  const onTheAirShowsData = await TheMovieDbService.getOnTheAirShows();
+  const popularShowsData = await TheMovieDbService.getPopularShows();
+  const topRatedShowsData = await TheMovieDbService.getTopRatedShows();
 
   const [
     movieGenres,
