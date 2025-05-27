@@ -7,7 +7,7 @@ import { DEVICES } from "@/dataset/devices";
 export const DevicesList = () => {
   return (
     <>
-      <div className={styles["devices-list__text-container"]}>
+      <div className={styles["devices-list__text-devices-container"]}>
           <h2 className={styles["devices-list__heading"]}>
             We Provide you streaming experience across various devices.
           </h2>

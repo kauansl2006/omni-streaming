@@ -1,4 +1,3 @@
-
 .background-image__container {
   display: flex;
   align-items: center;
@@ -29,7 +28,8 @@
 .background-image__image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 
@@ -71,6 +71,15 @@
   color: var(--color-gray-60);
 }
 
+.background-image__text--mobile {
+  text-align: center;
+  font-size: var(--fs-3xs);
+  font-weight: var(--fw-regular);
+  line-height: 150%;
+  color: var(--color-gray-60);
+  display: none;
+}
+
 .background-image__button {
   outline: none;
   appearance: none;
@@ -84,3 +93,77 @@
   line-height: 150%;
   color: var(--color-white);
 }
+
+  @media only screen and (max-width: 1440px) {
+    .background-image__container {
+      row-gap: -100px;
+    }
+
+    .background-image__image-container {
+      height: 836px;
+    }
+
+    .background-image__text-image-container {
+      padding-inline: 150px;
+      row-gap: 40px;
+      height: 237px;
+    }
+
+    .background-image__text-container {
+      row-gap: 10px;
+    }
+
+    .background-image__heading {
+      font-size: var(--fs-xl);
+    }
+
+    .background-image__text {
+      font-size: var(--fs-3xs);
+    }
+
+    .background-image__button {
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: var(--fs-3xs);
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .background-image__container {
+      row-gap: 0px;
+    }
+
+    .background-image__image-container {
+      height: 500px;
+    }
+
+    .background-image__text-image-container {
+      padding-inline: 6%;
+      row-gap: 30px;
+      height: 239px;
+    }
+
+    .background-image__text-container {
+      row-gap: 10px;
+    }
+
+    .background-image__heading {
+      font-size: var(--fs-md);
+    }
+
+    .background-image__text {
+      display: none;
+    }
+
+    .background-image__text--mobile {
+      display: block;
+    }
+
+    .background-image__button {
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: var(--fs-3xs);
+      text-wrap: nowrap;
+      text-overflow: ellipsis;
+    }
+  }

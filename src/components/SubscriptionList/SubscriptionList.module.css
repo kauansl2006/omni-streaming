@@ -40,7 +40,7 @@
   column-gap: 10px;
 }
 
-.subscription-list__button:nth-child(1) {
+.subscription-list__button--active  {
   padding: 14px 24px;
   appearance: none;
   border: none;
@@ -54,7 +54,7 @@
   background-color: var(--color-black-12);
 }
 
-.subscription-list__button:nth-child(2) {
+.subscription-list__button {
   padding: 14px 24px;
   appearance: none;
   border: none;
@@ -71,7 +71,90 @@
 .subscription-list__subscription-container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  column-gap: 30px;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .subscription-list__heading-container {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 80px;
+  }
+
+  .subscription-list__text-container {
+    column-gap: 10px;
+  }
+
+  .subscription-list__heading {
+    font-size: var(--fs-md);
+  }
+
+  .subscription-list__p {
+    font-size: var(--fs-2xs);
+  }
+
+  .subscription-list__buttons-container {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .subscription-list__button--active {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: var(--fs-3xs);
+  }
+
+  .subscription-list__button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: var(--fs-3xs);
+  }
+
+  .subscription-list__subscription-container {
+    column-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .subscription-list__heading-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .subscription-list__text-container {
+    column-gap: 20px;
+  }
+
+  .subscription-list__heading {
+    font-size: var(--fs-xs2);
+  }
+
+  .subscription-list__p {
+    font-size: var(--fs-3xs);
+  }
+
+  .subscription-list__buttons-container {
+    padding: 8px;
+    border-radius: 8px; 
+  }
+
+  .subscription-list__button--active {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: var(--fs-3xs);
+  }
+
+  .subscription-list__button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: var(--fs-3xs);
+  }
+
+  .subscription-list__subscription-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }

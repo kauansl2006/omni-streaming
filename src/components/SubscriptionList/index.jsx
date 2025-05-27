@@ -15,7 +15,7 @@ export const SubscriptionList = () => {
           </p>
         </div>
         <div className={styles["subscription-list__buttons-container"]}>
-          <button className={styles["subscription-list__button"]}>Monthly</button>
+          <button className={styles["subscription-list__button--active"]}>Monthly</button>
           <button className={styles["subscription-list__button"]}>Yearly</button>
         </div>
       </div>
