@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
 
-import { Showcase } from "@/components/MoviesAndShows/ShowcaseList/Showcase";
-import { Banner } from "@/components/Home/Banner";
-import { Carousel } from "@/components/MoviesAndShows/Carousel";
+import { Showcase } from "@/components/ShowcaseList/Showcase";
+import { Banner } from "@/components/Banner";
+import { Carousel } from "@/components/Carousel";
 import { IMAGES } from "@/dataset/images";
-import { ShowcaseList } from "@/components/MoviesAndShows/ShowcaseList";
+import { ShowcaseList } from "@/components/ShowcaseList";
 
 export default function MoviesAndShowsPage() {
   return (

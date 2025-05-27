@@ -2,7 +2,7 @@ import styles from "./FaqList.module.css";
 
 import { QUESTIONS } from "@/dataset/questions";
 
-import { Question } from "@/components/Home/FaqList/Question";
+import { Question } from "@/components/FaqList/Question";
 
 export const FaqList = () => {
   return (

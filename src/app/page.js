@@ -2,12 +2,12 @@ import styles from "./page.module.css";
 
 import { fetchDiscoverMovies } from "@/lib/data";
 
-import { Showcase } from "@/components/MoviesAndShows/ShowcaseList/Showcase";
-import { FaqList } from "@/components/Home/FaqList";
-import { SubscriptionList } from "@/components/Home/SubscriptionList";
-import { Banner } from "@/components/Home/Banner";
-import { BackgroundImage } from "@/components/Home/BackgroundImage";
-import { DevicesList } from "@/components/Home/DevicesList";
+import { Showcase } from "@/components/ShowcaseList/Showcase";
+import { FaqList } from "@/components/FaqList";
+import { SubscriptionList } from "@/components/SubscriptionList";
+import { Banner } from "@/components/Banner";
+import { BackgroundImage } from "@/components/BackgroundImage";
+import { DevicesList } from "@/components/DevicesList";
 
 export default async function HomePage() {
   const discoverMovies = await fetchDiscoverMovies();

@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 
-import { SubscriptionList } from "@/components/Home/SubscriptionList";
-import { Banner } from "@/components/Home/Banner";
+import { SubscriptionList } from "@/components/SubscriptionList";
+import { Banner } from "@/components/Banner";
 import { SubscriptionTable } from "@/components/SubscriptionTable";
 
 export default function SubscriptionPage() {

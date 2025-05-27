@@ -14,7 +14,7 @@ import {
   fetchUpcomingMovies,
 } from "@/lib/data";
 
-import { Showcase } from "@/components/MoviesAndShows/ShowcaseList/Showcase";
+import { Showcase } from "@/components/ShowcaseList/Showcase";
 
 export const ShowcaseList = async ({ type }) => {
   const movieGenresData = await fetchMovieGenres();

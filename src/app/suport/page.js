@@ -2,8 +2,8 @@ import styles from "./page.module.css";
 
 import Image from "next/image";
 
-import { Banner } from "@/components/Home/Banner";
-import { FaqList } from "@/components/Home/FaqList";
+import { Banner } from "@/components/Banner";
+import { FaqList } from "@/components/FaqList";
 import { SuportForm } from "@/components/SuportForm";
 
 export default function SuportPage() {
