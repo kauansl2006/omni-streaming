@@ -14,51 +14,63 @@
   justify-content: center;
 }
 
-.home__categories-section {
-  width: 100%;
-  padding-inline: 162px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 100px;
-}
-
-.home__devices-section {
-  width: 100%;
-  padding-inline: 162px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 80px;
-}
-
-.home__faq-section {
-  width: 100%;
-  padding-inline: 162px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 80px;
-}
-
+.home__categories-section,
+.home__devices-section,
+.home__faq-section,
 .home__subscription-section {
   width: 100%;
-  padding-inline: 162px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   row-gap: 80px;
+  padding-inline: 10%;
 }
 
 .home__banner-section {
   width: 100%;
   height: 313px;
-  padding-inline: 162px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-inline: 10%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .home__main {
+    row-gap: 120px;
+  }
+  
+  .home__categories-section,
+  .home__devices-section,
+  .home__faq-section,
+  .home__subscription-section {
+    row-gap: 60px;
+    padding-inline: 8%;
+
+  }
+
+  .home__banner-section {
+    height: 236px;
+    padding-inline: 8%;
+  } 
+}
+
+@media only screen and (max-width: 390px) {
+  .home__main {
+    row-gap: 100px;
+  }
+
+  .home__categories-section,
+  .home__devices-section,
+  .home__faq-section,
+  .home__subscription-section {
+    row-gap: 40px;
+    padding-inline: 6%;
+  }
+
+  .home__banner-section {
+    height: 344px;
+    padding-inline: 6%;
+  } 
 }
