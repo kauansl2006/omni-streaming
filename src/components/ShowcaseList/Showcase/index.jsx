@@ -1,0 +1,53 @@
+"use client";
+
+import { Suspense, useRef } from "react";
+
+import styles from "./Showcase.module.css";
+
+import { CardsList } from "./CardsList";
+import { CategoriesList } from "./CategoriesList";
+
+export const Showcase = ({ heading, items, type, id }) => {
+  const swiperRef = useRef(null)
+
+  return (
+    <section id={id ? id : null} className={styles["showcase__section"]}>
+      <div className={styles["showcase__container"]}>
+        <div className={styles["showcase__heading-container"]}>
+          <h2 className={styles["showcase__h2"]}>{heading}</h2>
+          {
+            !(type === "categories") && (
+
+              <div className={styles["showcase__buttons"]}>
+                <button
+                  className={styles["showcase__button"]}
+                  onClick={() => swiperRef.current?.slidePrev()}
+                >
+                  {"<"}
+                </button>
+                <button
+                  className={styles["showcase__button"]}
+                  onClick={() => swiperRef.current?.slideNext()}
+                >
+                  {">"}
+                </button>
+              </div>
+            )
+          }
+        </div>
+
+        <div className={styles["showcase__cards-container"]}>
+          <Suspense fallback={<div className={styles["showcase__loading"]}>Loading...</div>}>
+            {
+              type === "categories" ? (
+                <CategoriesList items={items} swiperRef={swiperRef} />
+              ) : (
+                <CardsList items={items} swiperRef={swiperRef} />
+              )
+            }
+          </Suspense>
+        </div>
+      </div>
+    </section>
+  );
+}

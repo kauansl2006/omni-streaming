@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./carousel.module.css";
+import styles from "./Carousel.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,10 +10,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { BackdropComponent } from "../Backdrop";
+import { Backdrop } from "./Backdrop";
 import { Suspense } from "react";
 
-export const CarouselComponent = ({ items }) => {
+export const Carousel = ({ items }) => {
   return (
       <Swiper
         modules={[Navigation, Pagination]}
@@ -24,8 +24,8 @@ export const CarouselComponent = ({ items }) => {
         {
           items.map((item) => (
             <SwiperSlide key={item.id}>
-              <Suspense fallback={<div className={styles["loading__carousel"]}>Loading backdrops...</div>} >
-                <BackdropComponent  item={item} />
+              <Suspense fallback={<div className={styles["carousel__loading"]}>Loading backdrops...</div>} >
+                <Backdrop  item={item} />
               </Suspense>
             </SwiperSlide>
           ))

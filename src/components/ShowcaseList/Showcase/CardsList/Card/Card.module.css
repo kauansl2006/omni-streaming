@@ -1,0 +1,93 @@
+.card__card {
+  width: 280px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-black-10);
+  position: relative;
+  border-radius: 12px;
+}
+
+.card__card-poster-container{
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.card__poster {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.card__body-container{
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  background-color: var(--color-black);
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.card-body__card:hover {
+  opacity: 0.9;
+}
+
+.card__original-title{
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semi-bold);
+  line-height: 150%;
+}
+
+.card__overview{
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-regular);
+  line-height: 150%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+}
+
+.card__span-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card__span-container > span {
+  background: var(--color-black-20);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-medium);
+  line-height: 150%;
+}
+
+.card__button {
+  border: none;
+  outline: none;
+  appearance: none;
+  width: 100%;
+  background: #2c0ce2;
+  margin-top: 20px;
+  color: var(--color-white);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  line-height: 150%;
+  cursor: pointer;
+}
