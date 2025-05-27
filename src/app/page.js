@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 
 import { fetchDiscoverMovies } from "@/lib/data";
 
-import { Showcase } from "@/components/Showcase";
+import { Showcase } from "@/components/MoviesAndShows/ShowcaseList/Showcase";
 import { FaqList } from "@/components/Home/FaqList";
 import { SubscriptionList } from "@/components/Home/SubscriptionList";
 import { Banner } from "@/components/Home/Banner";

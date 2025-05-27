@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Backdrop } from "../Backdrop";
+import { Backdrop } from "./Backdrop";
 import { Suspense } from "react";
 
 export const Carousel = ({ items }) => {
@@ -24,7 +24,7 @@ export const Carousel = ({ items }) => {
         {
           items.map((item) => (
             <SwiperSlide key={item.id}>
-              <Suspense fallback={<div className={styles["loading__carousel"]}>Loading backdrops...</div>} >
+              <Suspense fallback={<div className={styles["carousel__loading"]}>Loading backdrops...</div>} >
                 <Backdrop  item={item} />
               </Suspense>
             </SwiperSlide>
