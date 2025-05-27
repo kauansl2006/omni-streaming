@@ -4,7 +4,7 @@ import { SUBSCRIPTIONS } from "@/dataset/subscriptions";
 
 import { SubscriptionCard } from "./SubscriptionCard";
 
-export const SubscriptionList = ({ id }) => {
+export const SubscriptionList = () => {
   return (
     <>
       <div className={styles["subscription-list__heading-container"]}>

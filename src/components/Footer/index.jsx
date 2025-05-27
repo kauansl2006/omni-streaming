@@ -110,7 +110,7 @@ export const Footer = () => {
           <h6 className={styles["footer__heading"]}>Subscription</h6>
           <ul className={styles["footer__ul"]}>
             <li className={styles["footer__li"]}>
-              <Link href="/subscription#plans-section" className={styles["footer__item"]}>
+              <Link href="/subscription#subscription-section" className={styles["footer__item"]}>
                 Plans
               </Link>
             </li>
