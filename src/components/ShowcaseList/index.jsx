@@ -52,12 +52,12 @@ export const ShowcaseList = async ({ type }) => {
       <div className={styles["showcase-list__showcase-container"]}>
         {type === "Movies" ? (
           <>
-            <Showcase
+{/*             <Showcase
               heading={"Movie Genres"}
               items={movieGenres}
               type={"categories"}
               id="movies-gernres"
-            />
+            /> */}
             <Showcase
               heading={"Discover Movies"}
               items={discoverMovies}
@@ -85,12 +85,12 @@ export const ShowcaseList = async ({ type }) => {
           </>
         ) : (
           <>
-            <Showcase
+{/*             <Showcase
               heading={"Show Genres"}
               items={showGenres}
               type={"categories"}
               id="shows-gernres"
-            />
+            /> */}
             <Showcase
               heading={"Discover TV Shows"}
               items={discoverShows}

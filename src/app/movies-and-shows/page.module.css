@@ -1,31 +1,67 @@
 .movies-and-shows__main {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 100px;
   row-gap: 100px;
 }
 
 .movies-and-shows__carousel-section {
-  padding-inline: 162px;
+  margin-top: 100px;
+  padding-inline: 10%;
   width: 100%;
-  height: 100%;
   border-radius: 12px;
 }
 
 .movies-and-shows__section {
-  padding-inline: 162px;
+  padding-inline: 10%;
   width: 100%;
   height: auto;
 }
 
 .movies-and-shows__banner-section {
-  padding-inline: 162px;
+  padding-inline: 10%;
   width: 100%;
   height: 313px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1440px) {
+  .movies-and-shows__main {
+    row-gap: 100px;
+  }
+
+  .movies-and-shows__carousel-section {
+    padding-inline: 8%;
+  }
+
+  .movies-and-shows__section {
+    padding-inline: 8%;
+  }
+
+  .movies-and-shows__banner-section {
+    padding-inline: 8%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .movies-and-shows__main {
+    row-gap: 80px;
+  }
+
+  .movies-and-shows__carousel-section {
+    padding-inline: 6%;
+  }
+
+  .movies-and-shows__section {
+    padding-inline: 6%;
+  }
+  
+  .movies-and-shows__banner-section {
+    padding-inline: 6%;
+  }
 }

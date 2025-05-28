@@ -5,13 +5,12 @@ import Image from "next/image";
 export const Backdrop = ({ item }) => {
   return (
     <div className={styles["backdrop__container"]}>
-
       <div className={styles["backdrop__image-container"]}>
         <Image
           src={item.backdrop}
           alt={`${item.title} image`}
-          width={1920}
-          height={860}
+          fill={true}
+          objectFit="cover"
           className={styles["backdrop__image"]}
         />
       </div>
@@ -23,10 +22,13 @@ export const Backdrop = ({ item }) => {
         </div>
 
         <div className={styles["backdrop__buttons-container"]}>
-          <button className={styles["backdrop__button-play-now"]}>Play Now</button>
-          <button className={styles["backdrop__button-icon"]}>Icon 1</button>
-          <button className={styles["backdrop__button-icon"]}>Icon 2</button>
-          <button className={styles["backdrop__button-icon"]}>Icon 3</button>
+          <button className={styles["backdrop__button--blue"]}>Play Now</button>
+
+          <div className={styles["backdrop__icon-buttons-container"]}>
+            <button className={styles["backdrop__icon-button"]}>Icon 1</button>
+            <button className={styles["backdrop__icon-button"]}>Icon 2</button>
+            <button className={styles["backdrop__icon-button"]}>Icon 3</button>
+          </div>
         </div>
       </div>
     </div>
