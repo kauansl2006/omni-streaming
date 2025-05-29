@@ -33,7 +33,6 @@
   font-weight: var(--fw-bold);
   line-height: 150%;
   text-align: start;
-  text-wrap: nowrap;
 }
 
 .showcase__text {
