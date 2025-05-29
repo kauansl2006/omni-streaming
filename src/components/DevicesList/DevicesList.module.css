@@ -23,9 +23,42 @@
 
 .devices-list__devices-container {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   gap: 30px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .devices-list__text-devices-container{
+    row-gap: 10px;
+    padding-right: 0px;
+  }
+  .devices-list__heading {
+    font-size: var(--fs-md);
+  }
+  .devices-list__text {
+    font-size: var(--fs-2xs);
+  }
+  .devices-list__devices-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .devices-list__text-devices-container{
+    row-gap: 10px;
+    padding-right: 0px;
+  }
+  .devices-list__heading {
+    font-size: var(--fs-xs2);
+  }
+  .devices-list__text {
+    font-size: var(--fs-3xs);
+  }
+  .devices-list__devices-container {
+    gap: 20px;
+  }
 }

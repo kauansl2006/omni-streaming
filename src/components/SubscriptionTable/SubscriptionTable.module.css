@@ -27,6 +27,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 .subscription__table {
@@ -64,4 +66,34 @@
   font-weight: var(--fw-medium);
   color: var(--color-gray-60);
   line-height: 150%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .subscription__text-container {
+    row-gap: 10px;
+  }
+  .subscription__heading {
+    font-size: var(--fs-lg);
+  }
+  .subscription__text {
+    font-size: var(--fs-2xs);
+  }
+  .subscription__th {
+    font-size: var(--fs-xs);
+  }
+  .subscription__td {
+    font-size: var(--fs-2xs);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .subscription__text-container {
+    row-gap: 8px;
+  }
+  .subscription__heading {
+    font-size: var(--fs-sm2);
+  }
+  .subscription__text {
+    font-size: var(--fs-3xs);
+  }
 }

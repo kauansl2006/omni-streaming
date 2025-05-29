@@ -25,7 +25,14 @@ export default async function HomePage() {
         id="categories-section"
         className={styles["home__categories-section"]}
       >
-        <Showcase heading={"Movies"} items={discoverMovies} type={"movies"} />
+        <Showcase
+          heading={"Explore our wide variety of categories"}
+          text={
+            "Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
+          }
+          items={discoverMovies}
+          type={"movies"}
+        />
       </section>
 
       <section id="devices-section" className={styles["home__devices-section"]}>

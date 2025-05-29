@@ -5,12 +5,12 @@
   column-gap: 100px;
   padding: 80px 100px;
   width: 100%;
-  height: 100%;
+  height: 313px;
   position: relative;
   background-color: var(--color-black);
   border: 1px solid var(--color-black-15);
   border-radius: 12px;
-  background: linear-gradient(50deg,rgba(0, 0, 0, 1) 25%, rgba(15, 15, 15, 1) 50%, rgba(44, 12, 226, 0.5) 100%);
+  background: linear-gradient(50deg, rgba(0, 0, 0, 1) 25%, rgba(15, 15, 15, 1) 50%, rgba(44, 12, 226, 0.5) 100%);
 }
 
 .banner__background-image {
@@ -20,13 +20,16 @@
   top: 0;
   left: 0;
 }
+
 .banner__image {
   z-index: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;  
+  object-fit: cover;
+  background-repeat: no-repeat;
   opacity: 50%;
 }
+
 .banner__text-container {
   z-index: 1;
   width: 100%;
@@ -36,18 +39,21 @@
   flex-direction: column;
   row-gap: 14px;
 }
+
 .banner__heading {
   font-size: var(--fs-lg2);
   font-weight: var(--fw-bold);
   line-height: 150%;
   color: var(--color-white);
 }
+
 .banner__text {
   font-size: var(--fs-xs);
   font-weight: var(--fw-regular);
   line-height: 150%;
   color: var(--color-gray-60);
 }
+
 .banner__button {
   cursor: pointer;
   width: 188px;
@@ -65,4 +71,60 @@
   text-wrap: nowrap;
   opacity: 100%;
   z-index: 1;
+}
+
+@media only screen and (max-width: 1440px) {
+  .banner__container {
+    padding: 80px 60px; 
+    height: 236px;
+  }
+
+  .banner__text-container {
+    row-gap: 10px;
+  }
+
+  .banner__heading {
+    font-size: var(--fs-md);
+  }
+
+  .banner__text {
+    font-size: var(--fs-2xs);
+  }
+
+  .banner__button {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: var(--fs-3xs);
+    font-weight: var(--fw-semi-bold);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .banner__container {
+    flex-direction: column;
+    padding: 50px 30px; 
+    row-gap: 50px;
+    height: 344px;
+  }
+
+  .banner__text-container {
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .banner__heading {
+    font-size: var(--fs-sm2);
+  }
+
+  .banner__text {
+    font-size: var(--fs-3xs);
+  }
+
+  .banner__button {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: var(--fs-3xs);
+    font-weight: var(--fw-semi-bold);
+  }
 }

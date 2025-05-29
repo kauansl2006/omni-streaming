@@ -14,8 +14,8 @@ export const SubscriptionCard = ({ item }) => {
       </div>
 
       <div className={styles["subscription-card__buttons-container"]}>
-        <button className={styles["subscription-card__button"]}>Start Free Trial</button>
-        <button className={styles["subscription-card__button"]}>Choose Plan</button>
+        <button className={styles["subscription-card__button--black"]}>Start Free Trial</button>
+        <button className={styles["subscription-card__button--blue"]}>Choose Plan</button>
       </div>
     </div>
   )

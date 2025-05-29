@@ -9,10 +9,26 @@ import { Card } from "./Card";
 export const CardsList = ({ items, swiperRef }) => {
   return (
     <Swiper
-      spaceBetween={30}
-      slidesPerView={5}
       onSwiper={(swiper) => {
         swiperRef.current = swiper
+      }}
+      breakpoints={{
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        780: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1840: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
       }}
     >
       {items.map((item) => (

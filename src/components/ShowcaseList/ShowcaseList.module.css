@@ -36,3 +36,42 @@
    border: 1px solid var(--color-black-15);
    border-radius: 12px;
  }
+
+ @media only screen and (max-width: 1440px) {
+  .showcase-list__container {
+    row-gap: -22px;
+  }
+
+  .showcase-list__text-container {
+    row-gap: 10px;
+  }
+
+  .showcase-list__heading {
+    font-size: var(--fs-2xs);
+  }
+
+  .showcase-list__showcase-container {
+    row-gap: 80px;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .showcase-list__container {
+    row-gap: -22px;
+  }
+
+  .showcase-list__text-container {
+    row-gap: 10px;
+  }
+
+  .showcase-list__heading {
+    display: none;
+  }
+
+  .showcase-list__showcase-container {
+    border:  none;
+    row-gap: 50px;
+    padding: 0px;
+  }
+}
