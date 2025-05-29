@@ -19,7 +19,7 @@ export const Header = () => {
         <nav className={styles["header__nav"]}>
           <ul className={styles["header__ul"]}>
             <li className={styles["header__li"]}>
-              <Link href="/" className={styles["header__item"]}>
+              <Link href="/" className={styles["header__item--active"]}>
                 Home
               </Link>
             </li>
@@ -41,7 +41,7 @@ export const Header = () => {
           </ul>
         </nav>
         <div className={styles["header__buttons-container"]}>
-          <button>Sign In</button>
+          <button className={styles["header__button"]}>Sign In</button>
         </div>
       </div>
     </header>
