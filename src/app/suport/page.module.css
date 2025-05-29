@@ -6,12 +6,12 @@
   justify-content: center;
   flex-direction: column;
   row-gap: 150px;
+  margin-top: 150px;
 }
 
 .suport__suport-section {
   width: 100%;
-  padding-inline: 162px;
-  margin-top: 100px;
+  padding-inline: 10%;
 }
 
 .suport__suport-container {
@@ -70,7 +70,7 @@
 
 .suport__faq-section {
   width: 100%;
-  padding-inline: 162px;
+  padding-inline: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,8 +81,122 @@
 .suport__banner-section {
   width: 100%;
   height: 313px;
-  padding-inline: 162px;
+  padding-inline: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 1440px) {
+  .suport__main {
+    row-gap: 120px;
+  }
+  .suport__suport-section,
+  .suport__faq-section {
+    padding-inline: 8%
+  }
+
+  .suport__suport-container {
+    column-gap: 50px;
+  }
+
+  .suport__sub-container {
+    row-gap: 40px;
+    width: 429px;
+  }
+
+  .suport__text-container {
+    row-gap: 10px;
+  }
+
+  .suport__heading {
+    font-size: var(--fs-lg);
+  }
+
+  .suport__text {
+    font-size: var(--fs-2xs);
+  }
+
+  .suport__image-container {
+    width: 429px;
+    height: 380px;
+  }
+
+  .suport__banner-section {
+    height: 236px;
+    padding-inline: 8%;
+  } 
+}
+
+@media only screen and (max-width: 1330px) {
+  .suport__suport-container {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .suport__sub-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .suport__text-container {
+    text-align: center;
+  } 
+
+  .suport__image-container {
+    display: none;
+  } 
+}
+
+@media only screen and (max-width: 760px) {
+  .suport__sub-container {
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .suport__main {
+    margin-top: 100px;
+    row-gap: 80px;
+  }
+  .suport__suport-section,
+  .suport__faq-section {
+    padding-inline: 3%
+  }
+
+  .suport__suport-container {
+    column-gap: 50px;
+  }
+
+  .suport__sub-container {
+    row-gap: 30px;
+    height: 510px;
+  }
+
+  .suport__text-container {
+    row-gap: 10px;
+  }
+
+  .suport__heading {
+    font-size: var(--fs-md);
+  }
+
+  .suport__text {
+    font-size: var(--fs-3xs);
+  }
+
+  .suport__image-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+  } 
+
+  .suport__banner-section {
+    height: 344px;
+    padding-inline: 3%;
+  } 
+}
+
