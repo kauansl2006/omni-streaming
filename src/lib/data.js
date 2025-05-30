@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 export const fetchTmdbData = async (endpoint) => {
   const TMDB_BASE_URL = process.env.TMDB_BASE_URL;
   const TMDB_TOKEN = process.env.TMDB_TOKEN;
@@ -17,7 +19,7 @@ export const fetchTmdbData = async (endpoint) => {
 export const fetchMovieGenres = async () => {
   const data = await fetchTmdbData("/genre/movie/list?language=en");
 
-  if (!data) throw new Error("movies genres not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -27,7 +29,7 @@ export const fetchDiscoverMovies = async () => {
     "/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
   );
 
-  if (!data) throw new Error("Discover movies not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -35,7 +37,7 @@ export const fetchDiscoverMovies = async () => {
 export const fetchPopularMovies = async () => {
   const data = await fetchTmdbData("/movie/popular?language=en-US&page=1");
 
-  if (!data) throw new Error("Popular movies not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -43,7 +45,7 @@ export const fetchPopularMovies = async () => {
 export const fetchTopRatedMovies = async () => {
   const data = await fetchTmdbData("/movie/top_rated?language=en-US&page=1");
 
-  if (!data) throw new Error("Top rated movies not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -51,7 +53,7 @@ export const fetchTopRatedMovies = async () => {
 export const fetchUpcomingMovies = async () => {
   const data = await fetchTmdbData("/movie/upcoming?language=en-US&page=1");
 
-  if (!data) throw new Error("Upcoming movies not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -59,7 +61,7 @@ export const fetchUpcomingMovies = async () => {
 export const fetchDetailsById = async (id, type) => {
   const data = await fetchTmdbData(`/${type}/${id}?language=en`);
 
-  if (!data) throw new Error(`${type} details not found`);
+  if (!data) notFound();
 
   return data;
 };
@@ -67,7 +69,7 @@ export const fetchDetailsById = async (id, type) => {
 export const fetchCreditsById = async (id, type) => {
   const data = await fetchTmdbData(`/${type}/${id}/credits?language=en`);
 
-  if (!data) throw new Error("movie credits not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -75,7 +77,7 @@ export const fetchCreditsById = async (id, type) => {
 export const fetchReviewsById = async (id, type) => {
   const data = await fetchTmdbData(`/${type}/${id}/reviews?language=en`);
 
-  if (!data) throw new Error("movie credits not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -83,7 +85,7 @@ export const fetchReviewsById = async (id, type) => {
 export const fetchShowGenres = async () => {
   const data = await fetchTmdbData("/genre/tv/list?language=en");
 
-  if (!data) throw new Error("show genres not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -93,7 +95,7 @@ export const fetchDiscoverShows = async () => {
     "/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc",
   );
 
-  if (!data) throw new Error("Discover shows not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -101,7 +103,7 @@ export const fetchDiscoverShows = async () => {
 export const fetchAiringTodayShows = async () => {
   const data = await fetchTmdbData("/tv/airing_today?language=en-US&page=1");
 
-  if (!data) throw new Error("Airing Today shows not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -109,7 +111,7 @@ export const fetchAiringTodayShows = async () => {
 export const fetchOnTheAirShows = async () => {
   const data = await fetchTmdbData("/tv/on_the_air?language=en-US&page=1");
 
-  if (!data) throw new Error("On The Air shows not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -117,7 +119,7 @@ export const fetchOnTheAirShows = async () => {
 export const fetchPopularShows = async () => {
   const data = await fetchTmdbData("/tv/popular?language=en-US&page=1");
 
-  if (!data) throw new Error("Popular shows not found");
+  if (!data) notFound();
 
   return data;
 };
@@ -125,7 +127,7 @@ export const fetchPopularShows = async () => {
 export const fetchTopRatedShows = async () => {
   const data = await fetchTmdbData("/tv/top_rated?language=en-US&page=1");
 
-  if (!data) throw new Error("Top rated shows not found");
+  if (!data) notFound();
 
   return data;
 };
