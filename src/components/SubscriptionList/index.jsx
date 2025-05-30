@@ -1,6 +1,6 @@
 import styles from "./SubscriptionList.module.css";
 
-import { SUBSCRIPTIONS } from "@/dataset/subscriptions";
+import { SUBSCRIPTIONS } from "@/constants/subscriptions";
 
 import { SubscriptionCard } from "./SubscriptionCard";
 

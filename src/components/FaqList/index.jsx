@@ -1,6 +1,6 @@
 import styles from "./FaqList.module.css";
 
-import { QUESTIONS } from "@/dataset/questions";
+import { QUESTIONS } from "@/constants/questions";
 
 import { Question } from "@/components/FaqList/Question";
 

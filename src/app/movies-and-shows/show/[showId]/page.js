@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 
 import { Suspense } from "react";
 
-import { TheMovieDbService } from "@/services/theMovieDbService";
+import { fetchDetailsById } from "@/lib/data";
 
 import { Backdrop } from "@/components/Carousel/Backdrop";
 import { Banner } from "@/components/Banner";
@@ -11,7 +11,7 @@ import { DetailsList } from "@/components/DetailsList";
 export default async function ShowPageOpen({ params }) {
   const { showId } = await params;
 
-  const show = await TheMovieDbService.getDetailsById(Number(showId), "show");
+  const show = await fetchDetailsById(Number(showId), "show");
   return (
     <main className={styles["show-open__main"]}>
       <section className={styles["show-open__backdrop-section"]}>
