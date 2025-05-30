@@ -64,7 +64,12 @@
   line-height: 150%;
 }
 .backdrop__buttons-container {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 .backdrop__icon-buttons-container {
   display: flex;
@@ -79,10 +84,10 @@
   border: none;
   cursor: pointer;
   background-color: #2c0ce2;
-  padding: 14px 20px;
-  border-radius: 8px;
+  padding: 18px 24px;
+  border-radius: 12px;
   color: var(--color-white);
-  font-size: var(--fs-3xs);
+  font-size: var(--fs-xs);
   font-weight: var(--fw-semi-bold);
   line-height: 150%;
   text-align: center;
@@ -94,10 +99,10 @@
   border: 1px solid var(--color-black-15);
   cursor: pointer;
   background-color: var(--color-black-06);
-  padding: 12px;
-  border-radius: 8px;
+  padding: 18px;
+  border-radius: 12px;
   color: var(--color-white);
-  font-size: var(--fs-3xs);
+  font-size: var(--fs-xs);
   font-weight: var(--fw-semi-bold);
   line-height: 150%;
   text-align: center;
@@ -122,14 +127,15 @@
   .backdrop__text {
     font-size: var(--fs-2xs);
   }
-  
-  .backdrop__buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 20px;
-    column-gap: 20px;
+  .backdrop__button--blue {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: var(--fs-3xs);
+  }
+  .backdrop__icon-button {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: var(--fs-3xs);
   }
 }
 

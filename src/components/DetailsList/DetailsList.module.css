@@ -1,0 +1,124 @@
+.details-list__container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.details-list__subcontainer:nth-child(1) {
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.details-list__subcontainer:nth-child(2) {
+  width: 30%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 50px;
+  background-color: var(--color-black-10);
+  border: 1px solid var(--color-black-15);
+  border-radius: 12px;
+}
+
+.details-list__card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 14px;
+  padding: 50px;
+  background-color: var(--color-black-10);
+  border: 1px solid var(--color-black-15);
+  border-radius: 12px;
+}
+
+.details-list__heading {
+  font-size: var(--fs-xs);
+  font-weight: var(--fs-medium);
+  color: var(--color-gray-60);
+  line-height: 150%;
+}
+
+.details-list__text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fs-medium);
+  color: var(--color-white);
+  line-height: 150%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.details-list__cast-container {
+  width: 100%;
+}
+
+.details-list__reviews-container {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .details-list__container {
+    column-gap: 20px;
+  }
+  .details-list__subcontainer:nth-child(1) {
+    width: 850px;
+    row-gap: 20px;
+  }
+  .details-list__subcontainer:nth-child(2) {
+    width: 416px;
+    row-gap: 24px;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  .details-list__card-container {
+    row-gap: 20px;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  .details-list__heading {
+    font-size: var(--fs-2xs);
+  }
+  .details-list__text {
+    font-size: var(--fs-2xs);
+  }
+}
+
+@media only screen and (max-width: 1386px) {
+  .details-list__container {
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+  }
+  .details-list__subcontainer:nth-child(1) {
+    row-gap: 20px;
+    width: 100%;
+  }
+  .details-list__subcontainer:nth-child(2) {
+    row-gap: 20px;
+    padding: 24px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .details-list__card-container {
+    width: 100%;
+    padding: 24px;
+  }
+  .details-list__heading {
+    font-size: var(--fs-3xs);
+  }
+  .details-list__text {
+    font-size: var(--fs-3xs);
+  }
+}

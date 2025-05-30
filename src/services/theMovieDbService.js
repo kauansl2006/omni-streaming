@@ -22,7 +22,7 @@ export class TheMovieDbService {
   static getMovieGenres = async () => {
     const data = await this.getTheMovieDbData("/genre/movie/list?language=en");
 
-    if (!data) throw new Error("Movies genres not found");
+    if (!data) throw new Error("movies genres not found");
 
     return data;
   };
@@ -67,10 +67,38 @@ export class TheMovieDbService {
     return data;
   };
 
+  static getDetailsById = async (id, type) => {
+    const data = await this.getTheMovieDbData(`/${type}/${id}?language=en`);
+
+    if (!data) throw new Error(`${type} details not found`);
+
+    return data;
+  };
+
+  static getCreditsById = async (id, type) => {
+    const data = await this.getTheMovieDbData(
+      `/${type}/${id}/credits?language=en`,
+    );
+
+    if (!data) throw new Error("movie credits not found");
+
+    return data;
+  };
+
+  static getReviewsById = async (id, type) => {
+    const data = await this.getTheMovieDbData(
+      `/${type}/${id}/reviews?language=en`,
+    );
+
+    if (!data) throw new Error("movie credits not found");
+
+    return data;
+  };
+
   static getShowGenres = async () => {
     const data = await this.getTheMovieDbData("/genre/tv/list?language=en");
 
-    if (!data) throw new Error("Show genres not found");
+    if (!data) throw new Error("show genres not found");
 
     return data;
   };
