@@ -7,8 +7,8 @@ export const Backdrop = ({ item }) => {
     <div className={styles["backdrop__container"]}>
       <div className={styles["backdrop__image-container"]}>
         <Image
-          src={item.backdrop}
-          alt={`${item.title} image`}
+          src={"https://image.tmdb.org/t/p/original" + item.backdrop_path}
+          alt={`${item.title ? item.title : item.name} image`}
           fill={true}
           objectFit="cover"
           className={styles["backdrop__image"]}
@@ -17,8 +17,8 @@ export const Backdrop = ({ item }) => {
 
       <div className={styles["backdrop__text-backdrop-container"]}>
         <div className={styles["backdrop__text-container"]}>
-          <h2 className={styles["backdrop__heading"]}>{item.title}</h2>
-          <p className={styles["backdrop__text"]}>{item.description}</p>
+          <h2 className={styles["backdrop__heading"]}>{item.title ? item.title : item.name}</h2>
+          <p className={styles["backdrop__text"]}>{item.overview}</p>
         </div>
 
         <div className={styles["backdrop__buttons-container"]}>
