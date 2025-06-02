@@ -11,7 +11,8 @@ import { DetailsList } from "@/components/DetailsList";
 export default async function ShowPageOpen({ params }) {
   const { showId } = await params;
 
-  const show = await fetchDetailsById(Number(showId), "show");
+  const show = await fetchDetailsById(Number(showId), "tv");
+
   return (
     <main className={styles["show-open__main"]}>
       <section className={styles["show-open__backdrop-section"]}>
