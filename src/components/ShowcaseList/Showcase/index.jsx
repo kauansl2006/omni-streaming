@@ -7,6 +7,8 @@ import styles from "./Showcase.module.css";
 import { CardsList } from "./CardsList";
 import { CategoriesList } from "./CategoriesList";
 
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 export const Showcase = ({ heading, text, items, type, id }) => {
   const swiperRef = useRef(null)
 
@@ -26,13 +28,13 @@ export const Showcase = ({ heading, text, items, type, id }) => {
                   className={styles["showcase__button"]}
                   onClick={() => swiperRef.current?.slidePrev()}
                 >
-                  {"<"}
+                  <FaArrowLeft />
                 </button>
                 <button
                   className={styles["showcase__button"]}
                   onClick={() => swiperRef.current?.slideNext()}
                 >
-                  {">"}
+                  <FaArrowRight />
                 </button>
               </div>
             )

@@ -2,6 +2,8 @@ import styles from "./BackgroundImage.module.css";
 
 import Image from "next/image";
 
+import { FaPlay } from "react-icons/fa";
+
 export const BackgroundImage = () => {
   return (
     <div className={styles["background-image__container"]}>
@@ -32,6 +34,7 @@ export const BackgroundImage = () => {
           </p>
         </div>
         <button className={styles["background-image__button"]}>
+          <FaPlay className={styles["background-image__icon-button"]} />
           Start Watching Now
         </button>
       </div>

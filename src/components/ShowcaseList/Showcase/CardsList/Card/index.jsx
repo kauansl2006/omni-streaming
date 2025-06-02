@@ -3,6 +3,8 @@ import styles from "./Card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+import { FaClock, FaEye } from "react-icons/fa6";
+
 export const Card = ({ item }) => {
   return (
     <div className={styles["card__card"]}>
@@ -18,8 +20,8 @@ export const Card = ({ item }) => {
         </div>
       </Link>
       <div className={styles["card__body-container"]}>
-        <span className={styles["card__span"]}>1:30min</span>
-        <span className={styles["card__span"]}>1.5k</span>
+        <span className={styles["card__span"]}><FaClock />1:30min</span>
+        <span className={styles["card__span"]}><FaEye />1.5k</span>
       </div>
     </div>
   );
