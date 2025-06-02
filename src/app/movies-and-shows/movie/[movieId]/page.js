@@ -20,7 +20,7 @@ export default async function MoviePageOpen({ params }) {
             <div className={styles["movie-open__loading"]}>Loading...</div>
           }
         >
-          <Backdrop item={movie} />
+          {movie.backdrop_path && <Backdrop item={movie} />}
         </Suspense>
       </section>
 

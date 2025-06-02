@@ -18,7 +18,7 @@ export const Question = ({ item }) => {
         <h5 className={styles["question__heading"]}>{item.title}</h5>
         {isOpen &&  <p className={styles["question__p"]}>{item.description}</p>}
       </div>
-      <button onClick={handleOpen} className={styles["question__icon"]}>
+      <button onClick={handleOpen} className={styles["question__button-icon"]}>
         {isOpen ? "-" : "+" }
       </button>
     </div>

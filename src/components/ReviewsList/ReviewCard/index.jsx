@@ -1,5 +1,7 @@
 import styles from "./ReviewCard.module.css";
 
+import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
+
 export const ReviewCard = ({ review }) => {
   return (
     <div className={styles["review__card"]}>
@@ -20,7 +22,17 @@ export const ReviewCard = ({ review }) => {
             }
           </h6>
         </div>
-        <span className={styles["review__rating"]}>{review.rating} stars</span>
+        <div className={styles["review__rating-container"]}>
+          <div className={styles["review__rating"]}>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStarHalfStroke />  
+          </div>  
+            
+           {review.rating}
+        </div>
       </div>
 
       <p className={styles["review__text"]}>{review.content}</p>

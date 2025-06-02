@@ -90,8 +90,16 @@
   font-size: var(--fs-xs);
   font-weight: var(--fw-semi-bold);
   line-height: 150%;
-  text-align: center;
   text-wrap: nowrap;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+}
+.backdrop__icon {
+  color: var(--color-white);
+  font-size: var(--fs-sm2);
 }
 .backdrop__icon-button {
   outline: none;
@@ -101,12 +109,10 @@
   background-color: var(--color-black-06);
   padding: 18px;
   border-radius: 12px;
-  color: var(--color-white);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semi-bold);
-  line-height: 150%;
   text-align: center;
-  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1440px) {

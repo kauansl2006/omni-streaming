@@ -22,13 +22,15 @@ export const Carousel = ({ items }) => {
         loop={true}
       >
         {
-          items.map((item) => (
-            <SwiperSlide key={item.id}>
-              <Suspense fallback={<div className={styles["carousel__loading"]}>Loading backdrops...</div>} >
-                <Backdrop  item={item} />
-              </Suspense>
-            </SwiperSlide>
-          ))
+          items.map((item) => {
+            item.backdrop_path && (
+              <SwiperSlide key={item.id}>
+                <Suspense fallback={<div className={styles["carousel__loading"]}>Loading backdrops...</div>} >
+                  <Backdrop item={item} />
+                </Suspense>
+              </SwiperSlide>
+            )
+          })
         }
       </Swiper>
   )

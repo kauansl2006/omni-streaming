@@ -12,7 +12,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "omni - get streaming now",
+  title: "omni",
   description: "The best plataform to find movies and TV series.",
 };
 

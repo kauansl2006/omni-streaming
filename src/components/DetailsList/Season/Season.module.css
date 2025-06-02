@@ -1,0 +1,115 @@
+.season__container {
+  width: 100%;
+  padding: 24px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  border-radius: 12px;
+  background-color: var(--color-black-06);
+  border: 1px solid var(--color-black-15);
+}
+.season__subcontainer:nth-child(1) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.season__text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 10px;
+}
+.season__heading {
+  font-size: var(--fs-sm2);
+  font-weight: var(--fw-semi-bold);
+  line-height: 150%;
+  color: var(--color-white);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.season__text {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  line-height: 150%;
+  color: var(--color-gray-60);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.season__button {
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  background-color: var(--color-black-08);
+  border: 1px solid var(--color-black-15);
+  padding: 14px;
+  font-size: var(--fs-md2);
+  font-weight: var(--fw-regular);
+  color: var(--color-white);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.season__subcontainer:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .season__container {
+    padding: 20px 40px;
+    border-radius: 10px;
+  }
+  .season__text-container {
+    column-gap: 8px;
+  }
+  .season__heading {
+    font-size: var(--fs-xs2);
+  }
+  .season__text {
+    font-size: var(--fs-2xs);
+  }
+  .season__button {
+    padding: 12px;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-regular);
+    color: var(--color-white);
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .season__container {
+    row-gap: 20px;
+    padding: 16px 20px;
+    border-radius: 10px;
+  }
+  .season__text-container {
+    column-gap: 6px;
+  }
+  .season__heading {
+    font-size: var(--fs-2xs);
+  }
+  .season__text {
+    font-size: var(--fs-3xs);
+  }
+  .season__button {
+    padding: 12px;
+  }
+  .season__subcontainer:nth-child(2) {
+    row-gap: 20px;
+  }
+}

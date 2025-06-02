@@ -2,6 +2,9 @@ import styles from "./Footer.module.css";
 
 import Link from "next/link";
 
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+
 export const Footer = () => {
   return (
     <footer className={styles["footer__footer"]}>
@@ -123,20 +126,20 @@ export const Footer = () => {
         </div>
         <div className={styles["footer__subcontainer"]}>
           <h6 className={styles["footer__heading"]}>Connect With Us</h6>
-          <ul className={styles["footer__ul"]}>
+          <ul className={styles["footer__ul-social-media"]}>
             <li className={styles["footer__li"]}>
-              <Link href="#" className={styles["footer__item"]}>
-                item 1
+              <Link href="#" className={styles["footer__item-social-media"]}>
+                <FaFacebook />
               </Link>
             </li>
             <li className={styles["footer__li"]}>
-              <Link href="#" className={styles["footer__item"]}>
-                item 2
+              <Link href="#" className={styles["footer__item-social-media"]}>
+                <FaXTwitter />
               </Link>
             </li>
             <li className={styles["footer__li"]}>
-              <Link href="#" className={styles["footer__item"]}>
-                item 3
+              <Link href="#" className={styles["footer__item-social-media"]}>
+                <FaLinkedin />
               </Link>
             </li>
           </ul>

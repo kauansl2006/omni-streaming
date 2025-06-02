@@ -34,6 +34,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #2c0ce2;
+  font-size: var(--fs-md2);
 }
 .device-card__heading {
   font-size: var(--fs-sm2);
@@ -56,6 +58,7 @@
   .device-card__title-container {
     column-gap: 12px;
   }
+
   .device-card__heading {
     font-size: var(--fs-xs2);
   }
