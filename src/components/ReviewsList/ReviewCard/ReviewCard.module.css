@@ -42,22 +42,30 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.review__rating {
+.review__rating-container {
   padding: 6px 10px;
   background-color: var(--color-black-08);
   border: 1px solid var(--color-black-15);
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   column-gap: 4px;
   font-size: var(--fs-xs);
   font-weight: var(--fw-medium);
   line-height: 150%;
-  color: var(--color-gray-60);
+  color: var(--color-white);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.review__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-2xs);
+  color: #2c0ce2;
 }
 .review__text {
   font-size: var(--fs-xs);
@@ -84,7 +92,7 @@
   .review__username {
     font-size: var(--fs-2xs);
   }
-  .review__rating {
+  .review__rating-container {
     font-size: var(--fs-3xs);
   }
   .review__text {
@@ -100,6 +108,9 @@
     font-size: var(--fs-2xs);
   }
   .review__username {
+    font-size: var(--fs-3xs);
+  }
+  .review__rating-container {
     font-size: var(--fs-3xs);
   }
   .review__rating {

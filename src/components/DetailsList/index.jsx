@@ -35,15 +35,18 @@ export const DetailsList = async ({ id, type }) => {
   return (
     <div className={styles["details-list__container"]}>
       <div className={styles["details-list__subcontainer"]}>
-        <div className={styles["details-list__card-container"]}>
-          <h5 className={styles["details-list__heading"]}>Seasons and Episodes</h5>
-          {
-            seasonWithEpisodes.map((season) => (
-              <Season key={season.id} season={season} />
-            ))
-          }
-        </div>
-
+       {
+        type === "tv" && (
+          <div className={styles["details-list__card-container"]}>
+            <h5 className={styles["details-list__heading"]}>Seasons and Episodes</h5>
+            {
+              seasonWithEpisodes.map((season) => (
+                <Season key={season.id} season={season} />
+              ))
+            }
+          </div>
+        )
+       }
 
         <div className={styles["details-list__card-container"]}>
           <h5 className={styles["details-list__heading"]}>Description</h5>

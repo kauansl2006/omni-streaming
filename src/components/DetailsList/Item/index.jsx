@@ -2,6 +2,8 @@ import styles from "./Item.module.css";
 
 import Image from "next/image";
 
+import { FaStar, FaStarHalfStroke } from "react-icons/fa6";
+
 export const Item = ({ heading, releaseDate, genres, rating, languages, crew }) => {
   return (
     <div className={styles["item__container"]}>
@@ -23,11 +25,29 @@ export const Item = ({ heading, releaseDate, genres, rating, languages, crew }) 
         <div className={styles["item__span-container"]}>
           <div className={styles["item__rating-card"]}>
             <h5 className={styles["item__rating-heading"]}>IMDb</h5>
-            <span className={styles["item__rating-span"]}>4.5 stars</span>
+            <div className={styles["item__rating-container"]}>
+              <div className={styles["item__rating"]}>
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStarHalfStroke />  
+              </div> 
+              4.5 
+            </div>
           </div>
           <div className={styles["item__rating-card"]}>
             <h5 className={styles["item__rating-heading"]}>TMDB</h5>
-            <span className={styles["item__rating-span"]}>4 stars</span>
+            <div className={styles["item__rating-container"]}>
+              <div className={styles["item__rating"]}>
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStarHalfStroke />  
+              </div> 
+              4.5 
+            </div>
           </div>
         </div>
       )}

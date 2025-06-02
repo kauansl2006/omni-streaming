@@ -3,7 +3,10 @@
 import { useState } from "react";
 
 import styles from "./Season.module.css";
+
 import { Episode } from "./Episode";
+
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 export const Season = ({ season }) => {
 
@@ -20,7 +23,7 @@ export const Season = ({ season }) => {
           <p className={styles["season__text"]}>{ season.episode_count } Episodes</p>
         </div>
         <button onClick={handleOpen} className={styles["season__button"]}>
-          {isOpen ? "-" : "+"}
+          {isOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
         </button>
       </div>
       {
