@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Card = ({ item }) => {
   return (
     <div className={styles["card__card"]}>
-      <Link className={styles["card__link"]} href={`/movies-and-shows/movie/${item.id}`}>
+      <Link className={styles["card__link"]} href={`/movies-and-shows/${item.title ? "movie" : "show"}/${item.id}`}>
         <div className={styles["card__poster-container"]}>
           <Image
             src={"https://image.tmdb.org/t/p/original" + item.poster_path}
