@@ -21,7 +21,7 @@ export default async function ShowPageOpen({ params }) {
             <div className={styles["show-open__loading"]}>Loading...</div>
           }
         >
-          <Backdrop item={show} />
+          {show.backdrop_path && <Backdrop item={show} />}
         </Suspense>
       </section>
 

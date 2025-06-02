@@ -48,29 +48,48 @@ export const DetailsList = async ({ id, type }) => {
         )
        }
 
-        <div className={styles["details-list__card-container"]}>
-          <h5 className={styles["details-list__heading"]}>Description</h5>
-          <p className={styles["details-list__text"]}>{data.overview}</p>
-        </div>
+        {
+          data.overview && (
+            <div className={styles["details-list__card-container"]}>
+              <h5 className={styles["details-list__heading"]}>Description</h5>
+              <p className={styles["details-list__text"]}>{data.overview}</p>
+            </div>
+          )
+        }
 
-        <div className={styles["details-list__card-container"]}>
-          <h5 className={styles["details-list__heading"]}>Cast</h5>
+        {
+          cast.length > 6 && (
+            <div className={styles["details-list__card-container"]}>
+              <h5 className={styles["details-list__heading"]}>Cast</h5>
 
-          <div className={styles["details-list__cast-container"]}>
-            <CastList cast={cast} />
-          </div>
-        </div>
-        <div className={styles["details-list__card-container"]}>
-          <h5 className={styles["details-list__heading"]}>Reviews</h5>
+              <div className={styles["details-list__cast-container"]}>
+                <CastList cast={cast} />
+              </div>
+            </div>
+          )
+        }
+        {
+          reviews.length > 1 && (
+            <div className={styles["details-list__card-container"]}>
+              <h5 className={styles["details-list__heading"]}>Reviews</h5>
 
-          <div className={styles["details-list__reviews-container"]}>
-            <ReviewsList reviews={reviews} />
-          </div>
-        </div>
+              <div className={styles["details-list__reviews-container"]}>
+                <ReviewsList reviews={reviews} />
+              </div>
+            </div>
+          )
+        }
       </div>
 
       <div className={styles["details-list__subcontainer"]}>
-        <Item heading={"Released Year"} releaseDate={type === "movie" ? data.release_date.split("-")[0] : data.first_air_date.split("-")[0]} />
+        <Item 
+          heading={"Released Year"} 
+          releaseDate={
+            type === "movie" ? 
+            data.release_date.split("-")[0] : 
+            data.first_air_date.split("-")[0]
+          } 
+        />
         <Item heading={"Genres"} genres={data.genres} />
         <Item heading={"Rating"} rating={true} />
         <Item heading={"Available Languages"} languages={LANGUAGES} />

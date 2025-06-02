@@ -15,7 +15,6 @@ export const Backdrop = ({ item }) => {
           src={"https://image.tmdb.org/t/p/original" + item.backdrop_path}
           alt={`${item.title ? item.title : item.name} image`}
           fill={true}
-          objectFit="cover"
           className={styles["backdrop__image"]}
         />
       </div>
