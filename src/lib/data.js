@@ -131,3 +131,13 @@ export const fetchTopRatedShows = async () => {
 
   return data;
 };
+
+export const fetchTvSeasonDetails = async (seriesId, seasonNumber) => {
+  const data = await fetchTmdbData(
+    `/tv/${seriesId}/season/${seasonNumber}?language=en-US`,
+  );
+
+  if (!data) notFound();
+
+  return data;
+};
