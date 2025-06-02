@@ -2,7 +2,7 @@ import styles from "./DevicesList.module.css";
 
 import { DeviceCard } from "@/components/DevicesList/DeviceCard";
 
-import { DEVICES } from "@/dataset/devices";
+import { DEVICES } from "@/constants/devices";
 
 export const DevicesList = () => {
   return (

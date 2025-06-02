@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 
 import { Banner } from "@/components/Banner";
 import { Carousel } from "@/components/Carousel";
-import { IMAGES } from "@/dataset/images";
+import { IMAGES } from "@/constants/images";
 import { ShowcaseList } from "@/components/ShowcaseList";
 
 export default function MoviesAndShowsPage() {

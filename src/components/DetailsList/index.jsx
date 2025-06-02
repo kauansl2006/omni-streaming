@@ -1,19 +1,24 @@
 import styles from "./DetailsList.module.css";
 
-import { TheMovieDbService } from "@/services/theMovieDbService";
-import { LANGUAGES } from "@/dataset/languages";
+import { 
+  fetchDetailsById,
+  fetchCreditsById,
+  fetchReviewsById,
+ } from "@/lib/data";
+ 
+import { LANGUAGES } from "@/constants/languages";
 
 import { ReviewsList } from "@/components/ReviewsList";
 import { CastList } from "@/components/CastList";
 import { Item } from "./Item";
 
 export const DetailsList = async ({ id, type }) => {
-  const data = await TheMovieDbService.getDetailsById(Number(id), type);
-  const { cast, crew } = await TheMovieDbService.getCreditsById(
+  const data = await fetchDetailsById(Number(id), type);
+  const { cast, crew } = await fetchCreditsById(
     Number(id),
     type
   );
-  const reviews = await TheMovieDbService.getReviewsById(Number(id), type);
+  const reviews = await fetchReviewsById(Number(id), type);
 
   return (
     <div className={styles["details-list__container"]}>
