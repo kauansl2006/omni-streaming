@@ -101,13 +101,13 @@ export const ShowcaseList = async ({ type }) => {
               heading={"Discover TV Shows"}
               items={discoverShows}
               type={"shows"}
-              id="discover-movies"
+              id="discover-shows"
             />
             <Showcase
               heading={"Airing Today Shows"}
               items={airingTodayShows}
               type={"shows"}
-              id="airing-today-movies"
+              id="airing-today-shows"
             />
             <Showcase
               heading={"On The Air Shows"}
@@ -119,13 +119,13 @@ export const ShowcaseList = async ({ type }) => {
               heading={"Popular Shows"}
               items={popularShows}
               type={"shows"}
-              id="popular-movies"
+              id="popular-shows"
             />
             <Showcase
               heading={"Top Rated Shows"}
               items={topRatedShows}
               type={"shows"}
-              id="top-rated-movies"
+              id="top-rated-shows"
             />
           </>
         )}
