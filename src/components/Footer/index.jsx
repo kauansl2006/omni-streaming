@@ -73,12 +73,12 @@ export const Footer = () => {
               </Link>
             </li>
             <li className={styles["footer__li"]}>
-              <Link href="/movies-and-shows#discover-movies" className={styles["footer__item"]}>
+              <Link href="/movies-and-shows#discover-shows" className={styles["footer__item"]}>
                 Discover
               </Link>
             </li>
             <li className={styles["footer__li"]}>
-              <Link href="/movies-and-shows#airing-today-movies" className={styles["footer__item"]}>
+              <Link href="/movies-and-shows#airing-today-shows" className={styles["footer__item"]}>
                 Airing Today
               </Link>
             </li>
@@ -88,12 +88,12 @@ export const Footer = () => {
               </Link>
             </li>
             <li className={styles["footer__li"]}>
-              <Link href="/movies-and-shows#popular-movies" className={styles["footer__item"]}>
+              <Link href="/movies-and-shows#popular-shows" className={styles["footer__item"]}>
                 Popular
               </Link>
             </li>
             <li className={styles["footer__li"]}>
-              <Link href="/movies-and-shows#top-rated-movies" className={styles["footer__item"]}>
+              <Link href="/movies-and-shows#top-rated-shows" className={styles["footer__item"]}>
                 Top Rated
               </Link>
             </li>

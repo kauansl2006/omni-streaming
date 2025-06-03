@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
 const fetchTmdbData = async (endpoint) => {
-  const TMDB_BASE_URL = process.env.TMDB_BASE_URL;
-  const TMDB_TOKEN = process.env.TMDB_TOKEN;
+  const TMDB_BASE_URL = process.env.NEXT_PUBLIC_TMDB_BASE_URL;
+  const TMDB_TOKEN = process.env.NEXT_PUBLIC_TMDB_TOKEN;
 
   return await fetch(`${TMDB_BASE_URL}${endpoint}`, {
     method: "GET",
