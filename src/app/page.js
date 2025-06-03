@@ -1,7 +1,5 @@
 import styles from "./page.module.css";
 
-import { fetchDiscoverMovies } from "@/lib/data";
-
 import { Showcase } from "@/components/ShowcaseList/Showcase";
 import { FaqList } from "@/components/FaqList";
 import { SubscriptionList } from "@/components/SubscriptionList";
@@ -9,9 +7,9 @@ import { Banner } from "@/components/Banner";
 import { BackgroundImage } from "@/components/BackgroundImage";
 import { DevicesList } from "@/components/DevicesList";
 
-export default async function HomePage() {
-  const discoverMovies = await fetchDiscoverMovies();
+import { GENRES } from "@/constants/genres";
 
+export default async function HomePage() {
   return (
     <main className={styles["home__main"]}>
       <section
@@ -30,8 +28,8 @@ export default async function HomePage() {
           text={
             "Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
           }
-          items={discoverMovies}
-          type={"movies"}
+          items={GENRES}
+          type={"categories"}
         />
       </section>
 
