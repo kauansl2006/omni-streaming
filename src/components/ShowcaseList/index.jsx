@@ -1,12 +1,10 @@
 import styles from "./ShowcaseList.module.css";
 
 import { 
-  fetchMovieGenres,
   fetchDiscoverMovies,
   fetchPopularMovies,
   fetchTopRatedMovies,
   fetchUpcomingMovies,
-  fetchShowGenres,
   fetchDiscoverShows,
   fetchAiringTodayShows,
   fetchOnTheAirShows,
@@ -14,15 +12,15 @@ import {
   fetchTopRatedShows
  } from "@/lib/data";
 
+import { GENRES } from "@/constants/genres";
+
 import { Showcase } from "@/components/ShowcaseList/Showcase";
 
 export const ShowcaseList = async ({ type }) => {
-  const movieGenresData = await fetchMovieGenres();
   const discoverMoviesData = await fetchDiscoverMovies();
   const popularMoviesData = await fetchPopularMovies();
   const topRatedMoviesData = await fetchTopRatedMovies();
   const upcomingMoviesData = await fetchUpcomingMovies();
-  const showGenresData = await fetchShowGenres();
   const discoverShowsData = await fetchDiscoverShows();
   const airingTodayShowsData = await fetchAiringTodayShows();
   const onTheAirShowsData = await fetchOnTheAirShows();
@@ -30,24 +28,20 @@ export const ShowcaseList = async ({ type }) => {
   const topRatedShowsData = await fetchTopRatedShows();
 
   const [
-    movieGenres,
     discoverMovies,
     popularMovies,
     topRatedMovies,
     upcomingMovies,
-    showGenres,
     discoverShows,
     airingTodayShows,
     onTheAirShows,
     popularShows,
     topRatedShows,
   ] = await Promise.all([
-    movieGenresData,
     discoverMoviesData,
     popularMoviesData,
     topRatedMoviesData,
     upcomingMoviesData,
-    showGenresData,
     discoverShowsData,
     airingTodayShowsData,
     onTheAirShowsData,
@@ -64,12 +58,12 @@ export const ShowcaseList = async ({ type }) => {
       <div className={styles["showcase-list__showcase-container"]}>
         {type === "Movies" ? (
           <>
-{/*             <Showcase
+            <Showcase
               heading={"Movie Genres"}
-              items={movieGenres}
+              items={GENRES}
               type={"categories"}
               id="movies-gernres"
-            /> */}
+            /> 
             <Showcase
               heading={"Discover Movies"}
               items={discoverMovies}
@@ -97,12 +91,12 @@ export const ShowcaseList = async ({ type }) => {
           </>
         ) : (
           <>
-{/*             <Showcase
+            <Showcase
               heading={"Show Genres"}
-              items={showGenres}
+              items={GENRES}
               type={"categories"}
               id="shows-gernres"
-            /> */}
+            /> 
             <Showcase
               heading={"Discover TV Shows"}
               items={discoverShows}
