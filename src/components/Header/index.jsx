@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 import styles from "./Header.module.css";
 
@@ -13,6 +13,7 @@ import { NAV_LINKS } from "@/constants/navLinks";
 
 export const Header = () => {
     const currentPath = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
   
     const isActive = (href) => currentPath === href;
   return (
@@ -22,12 +23,12 @@ export const Header = () => {
           <Image
             src="/logo.svg"
             alt="Aplication Logo"
-            width={500}
-            height={500}
+            width={250}
+            height={90}
             className={styles["header__logo"]}
           />
         </div>
-        <nav className={styles["header__nav"]}>
+        <nav className={isOpen ? `${styles["header__nav--active"]}`: `${styles["header__nav"]}`}>
           <ul className={styles["header__ul"]}>
             {NAV_LINKS.map((link) => {
               return (
@@ -47,8 +48,8 @@ export const Header = () => {
         <div className={styles["header__buttons-container"]}>
           <button className={styles["header__button"]}>Sign In</button>
 
-          <button className={styles["header__menu-button"]}>
-            <AiOutlineMenu />
+          <button className={styles["header__menu-button"]} onClick={() => setIsOpen(!isOpen)}>
+            <HiOutlineMenuAlt3 />
           </button>
         </div>
       </div>
