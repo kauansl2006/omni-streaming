@@ -1,0 +1,10 @@
+.cards-list__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  line-height: 150%;
+  color: var(--color-white);
+}

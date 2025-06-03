@@ -1,5 +1,9 @@
 "use client";
 
+import { Suspense } from "react";
+
+import styles from "./CardsList.module.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -33,7 +37,9 @@ export const CardsList = ({ items, swiperRef }) => {
     >
       {items.map((item) => (
         <SwiperSlide key={item.id}>
-          <Card item={item} />
+          <Suspense fallback={<div className={styles["cards-list__loading"]}>Loading backdrops...</div>} >
+            <Card item={item} />
+          </Suspense>
         </SwiperSlide>
       ))}
     </Swiper>
